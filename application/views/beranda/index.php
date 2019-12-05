@@ -108,19 +108,6 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
         <div class="container">
           <a class="navbar-brand mb-0" href="#">WINTEQ Technical Training Programs</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent3" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-bar"></span>
-            <span class="navbar-toggler-bar"></span>
-            <span class="navbar-toggler-bar"></span>
-          </button>
-          <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent3">
-            <ul class="navbar-nav ml-auto">
-              <a href="#paper-kit" class="btn btn-link btn-neutral">Components</a>
-              <a href="#paper-kit" class="btn btn-link btn-neutral">Tutorial</a>
-              <a href="#paper-kit" target="_blank" class="btn btn-link btn-neutral"><i class="fa fa-twitter"></i></a>
-              <a href="#paper-kit" target="_blank" class="btn btn-link btn-neutral"><i class="fa fa-facebook"></i></a>
-            </ul>
-          </div> -->
         </div>
       </nav>
       <div class="page-carousel">
