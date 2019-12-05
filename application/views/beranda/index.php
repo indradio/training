@@ -42,7 +42,7 @@
   <nav class="navbar navbar-expand-lg fixed-top nav-down">
     <div class="container">
       <div class="navbar-translate">
-        <a class="navbar-brand" data-scroll="true" data-id="#headers" href="<?= base_url(); ?>sections.html#headers">
+        <a class="navbar-brand" data-scroll="true" data-id="#headers" href="<?= base_url(); ?>#headers">
           <img src="<?= base_url(); ?>assets/img/icon.png" /> WINTEQ Technical Training Programs
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
