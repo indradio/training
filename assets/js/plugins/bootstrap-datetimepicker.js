@@ -522,7 +522,7 @@
         // Creative Tim Changes - we add after 180 ms the ".open" class, in this way the animations will be the same with the other dropdowns from the
         setTimeout(function() {
           widget.addClass('open');
-        }, 180);
+        }, 10);
 
       },
 
@@ -1021,7 +1021,7 @@
           viewDate = date.clone();
 
           return picker;
-        }, 400);
+        }, 40);
       },
 
       clear = function() {
@@ -2414,7 +2414,7 @@
     if (element.hasClass('input-group')) {
       // in case there is more then one 'input-group-addon' Issue #48
       if (element.find('.datepickerbutton').length === 0) {
-        component = element.find('.input-group-addon');
+        component = element.find('.form-control');
       } else {
         component = element.find('.datepickerbutton');
       }
