@@ -24,6 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'https://training.winteq-astra.com/';
+// $config['base_url'] = '';
 
 /*
 |--------------------------------------------------------------------------
