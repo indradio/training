@@ -43,7 +43,7 @@
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" data-scroll="true" data-id="#headers" href="<?= base_url(); ?>#headers">
-          <img src="<?= base_url(); ?>assets/img/icon.png" /> WINTEQ Technical Training Programs
+          <img src="<?= base_url(); ?>assets/img/logo.png" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-bar bar1"></span>
@@ -163,7 +163,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <div class="page-header" style="background-image: url('https://images.unsplash.com/photo-1482690205767-61deebe15ef7?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=')">
+              <div class="page-header" style="background-image: url('<?= base_url(); ?>assets/img/photo-training-2.jpg')">
                 <div class="filter"></div>
                 <div class="content-center">
                   <div class="container">
@@ -194,7 +194,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <div class="page-header" style="background-image: url('https://images.unsplash.com/photo-1498063669468-89723a87123d?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=')">
+              <div class="page-header" style="background-image: url('<?= base_url(); ?>assets/img/photo-training-3.jpg')">
                 <div class="filter"></div>
                 <div class="content-center">
                   <div class="container">
@@ -454,7 +454,7 @@
   </div>
   <div class="section section-pricing cd-section" id="programs">
     <!--     *********    PROGRAMS 3     *********      -->
-    <div class="pricing-3 section-image" style="background-image: url('<?= base_url(); ?>assets/img/sections/daniel-olahs.jpg')">
+    <div class="pricing-3 section-image" style="background-image: url('<?= base_url(); ?>assets/img/sections/training-pics.jpg')">
       <div class="container">
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto text-center">
@@ -467,7 +467,7 @@
           <div class="col-md-3 ml-auto mr-auto">
             <div class="card card-pricing">
               <div class="card-body">
-                <h6 class="card-category">BASIC PLC</h6>
+                <h4 class="card-category">BASIC</h4>
                 <div class="card-icon">
                   <i class="nc-icon nc-user-run"></i>
                 </div>
@@ -482,9 +482,26 @@
             </div>
           </div>
           <div class="col-md-3 mr-auto">
+            <div class="card card-pricing">
+              <div class="card-body">
+                <h4 class="card-category">INTERMEDIATE</h4>
+                <div class="card-icon">
+                  <i class="nc-icon nc-istanbul"></i>
+                </div>
+                <h3 class="card-title">$199</h3>
+                <p class="card-description">
+                  This is good if you are a freelancer of photographer.
+                </p>
+                <div class="card-footer">
+                  <a href="#pablo" class="btn btn-info btn-round card-link">Choose Plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mr-auto">
             <div class="card card-pricing" data-background="color" data-color="blue">
               <div class="card-body">
-                <h6 class="card-category">INTERMEDIATE PLC</h6>
+                <h3 class="card-category"><b>ADVANCE</b></h3>
                 <div class="card-icon">
                   <i class="nc-icon nc-air-baloon"></i>
                 </div>
@@ -501,24 +518,7 @@
           <div class="col-md-3 mr-auto">
             <div class="card card-pricing">
               <div class="card-body">
-                <h6 class="card-category">ADVANCE PLC</h6>
-                <div class="card-icon">
-                  <i class="nc-icon nc-istanbul"></i>
-                </div>
-                <h3 class="card-title">$199</h3>
-                <p class="card-description">
-                  This is good if you are a freelancer of photographer.
-                </p>
-                <div class="card-footer">
-                  <a href="#pablo" class="btn btn-info btn-round card-link">Choose Plan</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mr-auto">
-            <div class="card card-pricing">
-              <div class="card-body">
-                <h6 class="card-category">ADVANCE PLC NETWORKING</h6>
+                <h5 class="card-category">ADVANCE NETWORKING</h5>
                 <div class="card-icon">
                   <i class="nc-icon nc-istanbul"></i>
                 </div>
@@ -584,7 +584,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">The Executive Team 3</h2>
+            <h2 class="title">The Expert Trainers</h2>
             <h5 class="description">This is the paragraph where you can write more details about your team. Keep you user engaged by providing meaningful information.</h5>
           </div>
         </div>
@@ -602,8 +602,8 @@
                 </div>
                 <div class="col-md-7">
                   <div class="card-body text-left">
-                    <h4 class="card-title">Alec Thompson</h4>
-                    <h6 class="card-category">Founder</h6>
+                    <h4 class="card-title">Wahyu Hidayat Santoso</h4>
+                    <h6 class="card-category">Trainer</h6>
                     <p class="card-description">
                       Individual commitment to a group effort – that’s what makes a team work, a society work...
                     </p>
@@ -629,8 +629,8 @@
                 </div>
                 <div class="col-md-7">
                   <div class="card-body text-left">
-                    <h4 class="card-title">Ethan Smith</h4>
-                    <h6 class="card-category">Founder</h6>
+                    <h4 class="card-title">Irvan Febrinata</h4>
+                    <h6 class="card-category">Trainer</h6>
                     <p class="card-description">
                       Don't be scared of the truth because we need to restart the human foundation in truth...
                     </p>
@@ -651,12 +651,12 @@
   </div>
   <div class="section section-contactus cd-section" id="contact-us">
      <!--     *********    CONTACT US 1     *********      -->
-     <div class="contactus-1 section-image" style="background-image: url('<?= base_url(); ?>assets/img/sections/soroush-karimi.jpg')">
+     <div class="contactus-1 section-image" style="background-image: url('<?= base_url(); ?>assets/img/sections/winteq.jpg')">
       <div class="container">
         <div class="row">
           <div class="col-md-10 ml-auto mr-auto">
             <div class="card card-contact no-transition">
-              <h3 class="card-title text-center">Contact Us</h3>
+              <h3 class="card-title text-center">Daftar Sekarang!</h3>
               <div class="row">
                 <div class="col-md-5 ml-auto">
                   <div class="card-body">
@@ -686,42 +686,65 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5 mr-auto">
+                <div class="col-md-5 col-mb-2 mr-auto">
                   <form role="form" id="contact-form" method="post">
                     <div class="card-body">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group label-floating">
-                            <label class="control-label">First name</label>
-                            <input type="text" name="name" class="form-control" placeholder="First Name">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group label-floating">
-                            <label class="control-label">Last name</label>
-                            <input type="text" name="name" class="form-control" placeholder="Last Name">
-                          </div>
-                        </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Nama</label>
+                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap">
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Email address</label>
                         <input type="email" name="email" class="form-control" placeholder="Email" />
                       </div>
                       <div class="form-group label-floating">
-                        <label class="control-label">Your message</label>
-                        <textarea name="message" class="form-control" id="message" rows="6" placeholder="Message"></textarea>
+                        <label class="control-label">No. HP</label>
+                        <input type="text" name="name" class="form-control" placeholder="Nomor HP">
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Perusahaan</label>
+                        <input type="text" name="name" class="form-control" placeholder="Perusahaan">
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Jabatan</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Manager</option>
+                          <option>Supervisor</option>
+                          <option>Leader</option>
+                          <option>Teknisi</option>
+                          <option>Operator</option>
+                        </select>
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Masa Kerja</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>< 1 Tahun</option>
+                          <option>1 - 5 Tahun</option>
+                          <option>6 - 10 Tahun</option>
+                          <option>> 10 Tahun</option>
+                        </select>
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Training Program</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>BASIC ELECTRIC</option>
+                          <option>BASIC PLC</option>
+                          <option>INTERMEDIATE PLC</option>
+                          <option>ADVANCE PLC</option>
+                          <option>ADVANCE PLC NETWORKING</option>
+                        </select>
                       </div>
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" value=""> I'm not a robot !
+                              <input class="form-check-input" type="checkbox" id="check" value="" required="true"> I'm not a robot !
                               <span class="form-check-sign"></span>
                             </label>
                           </div>
                         </div>
                         <div class="col-md-6">
-                          <button type="submit" class="btn btn-primary pull-right">Send Message</button>
+                          <button type="submit" class="btn btn-primary pull-right" id="submit">DAFTAR</button>
                         </div>
                       </div>
                     </div>
@@ -740,49 +763,37 @@
       <li>
         <a href="#headers" data-number="1">
           <span class="cd-dot"></span>
-          <span class="cd-label">Headers</span>
+          <span class="cd-label">Beranda</span>
         </a>
       </li>
       <li>
-        <a href="#features" data-number="2">
+        <a href="#overviews" data-number="2">
           <span class="cd-dot"></span>
-          <span class="cd-label">Features</span>
+          <span class="cd-label">overview</span>
         </a>
       </li>
       <li>
-        <a href="#blogs" data-number="3">
+        <a href="#benefits" data-number="3">
           <span class="cd-dot"></span>
-          <span class="cd-label">Blogs</span>
+          <span class="cd-label">Benefit</span>
         </a>
       </li>
       <li>
-        <a href="#teams" data-number="4">
+        <a href="#programs" data-number="4">
           <span class="cd-dot"></span>
-          <span class="cd-label">Teams</span>
+          <span class="cd-label">Program</span>
         </a>
       </li>
       <li>
-        <a href="#projects" data-number="5">
+        <a href="#trainers" data-number="5">
           <span class="cd-dot"></span>
-          <span class="cd-label">Projects</span>
-        </a>
-      </li>
-      <li>
-        <a href="#pricing" data-number="6">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Pricing</span>
-        </a>
-      </li>
-      <li>
-        <a href="#testimonials" data-number="7">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Testimonials</span>
+          <span class="cd-label">Trainer</span>
         </a>
       </li>
       <li>
         <a href="#contact-us" data-number="8">
           <span class="cd-dot"></span>
-          <span class="cd-label">Contact Us</span>
+          <span class="cd-label">Daftar</span>
         </a>
       </li>
     </ul>
@@ -793,13 +804,7 @@
         <nav class="footer-nav">
           <ul>
             <li>
-              <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
-            </li>
-            <li>
-              <a href="http://blog.creative-tim.com/" target="_blank">Blog</a>
-            </li>
-            <li>
-              <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
+              <a href="https://www.winteq-astra.com" target="_blank">PT Astra Otoparts, Tbk. Divisi WINTEQ</a>
             </li>
           </ul>
         </nav>
@@ -808,7 +813,7 @@
             ©
             <script>
               document.write(new Date().getFullYear())
-            </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+            </script>, made with <i class="fa fa-heart heart"></i> by Winteq Digitalization Team.
           </span>
         </div>
       </div>
@@ -849,6 +854,19 @@
       if (window_width >= 768) {
         $(window).on('scroll', pk.checkScrollForPresentationPage);
       }
+
+      var checker = document.getElementById('check');
+        var sendbtn = document.getElementById('submit');
+        sendbtn.disabled = true;
+        // when unchecked or checked, run the function
+        checker.onchange = function() {
+            if (this.checked) {
+                sendbtn.disabled = false;
+            } else {
+                sendbtn.disabled = true;
+            }
+
+        }
 
       // Javascript method's body can be found in assets/js/core/partials/_demo-object.js
       demo.initContactUsMap2();
