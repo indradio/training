@@ -74,7 +74,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-round btn-twitter" data-scroll="true" data-id="#contact-us" href="<?= base_url(); ?>#contactus">
+            <a class="btn btn-round btn-primary" data-scroll="true" data-id="#contact-us" href="<?= base_url(); ?>#contactus">
               <i class="nc-icon nc-send"></i> DAFTAR
             </a>
           </li>
@@ -105,9 +105,11 @@
   <div class="section section-header cd-section" id="headers">
     <!--     *********     HEADER 3      *********      -->
     <div class="header-1">
+    <div class="space-top"></div>
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
+      <div class="space-top"></div>
         <div class="container">
-          <a class="navbar-brand mb-0" href="#">WINTEQ Technical Training Programs</a>
+          <a class="navbar-brand mb-0 mt-4" href="#">WINTEQ Technical Training Programs</a>
         </div>
       </nav>
       <div class="page-carousel">
@@ -120,58 +122,24 @@
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-              <div class="page-header" style="background-image: url('https://images.unsplash.com/photo-1498063401574-13cbee350467?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=');">
-                <div class="filter"></div>
+              <div class="page-header" style="background-image: url('<?= base_url(); ?>assets/img/white-bg.jpg');">
+                <!-- <div class="filter"></div> -->
                 <div class="content-center">
                   <div class="container">
                     <div class="row">
-                      <div class="col-md-6 text-left">
-                        <h1 class="title">Paper Kit 2 PRO</h1>
-                        <h5>Now you have no excuses, it's time to surprise your clients, your competitors, and why not, the world. You probably won't have a better chance to show off all your potential if it's not by designing a website for your own agency or web studio.</h5>
-                        <br />
-                        <div class="buttons">
-                          <a href="#pablo" class="btn btn-danger btn-round  btn-lg">
-                            Read More
-                          </a>
-                          <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                            <i class="fa fa-twitter"></i>
-                          </a>
-                          <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                            <i class="fa fa-facebook-square"></i>
-                          </a>
-                          <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                            <i class="fa fa-get-pocket"></i>
-                          </a>
+                    <div class="col-md-11 ml-auto mr-auto text-center text-dark">
+                        <div class="card-image">
+                            <img class="img" src="<?= base_url(); ?>assets/img/logo-banner.png" />
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="page-header" style="background-image: url('<?= base_url(); ?>assets/img/photo-training-2.jpg')">
-                <div class="filter"></div>
-                <div class="content-center">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-8 ml-auto mr-auto text-center">
-                        <h1 class="title">Awesome Experiences</h1>
-                        <h5>Now you have no excuses, it's time to surprise your clients, your competitors, and why not, the world. You probably won't have a better chance to show off all your potential if it's not by designing a website for your own agency or web studio.</h5>
+                        <h3 class="title text-dark">WINTEQ TECHNICAL TRAINING PROGRAMS</h3>
+                        <h5><b>Innovation and Invesment for Inclusive Sustainable Economic Development Project (ISED)</b></h5>
+                        <h5><i>Projek Investasi dan Inovasi untuk Pengembangan Ekonomi Inklusif yang Berkelanjutan</i></h5>
                         <br />
-                        <h6>Connect with us:</h6>
+                        <h5>Program pengembangan keahlian tenaga kerja di sektor industri makanan dan minuman untuk para Leader, Expert atau Spesialis dan Produksi yang berfokus pada kompetensi menuju industri 4.0</h5>
+                        <br />
                         <div class="buttons">
-                          <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                            <i class="fa fa-twitter"></i>
-                          </a>
-                          <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                            <i class="fa fa-facebook-square"></i>
-                          </a>
-                          <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                            <i class="fa fa-instagram"></i>
-                          </a>
-                          <a href="#pablo" class="btn btn-neutral btn-link btn-just-icon">
-                            <i class="fa fa-google-plus"></i>
+                          <a href="<?= base_url(); ?>#overviews" class="btn btn-danger btn-round btn-lg" data-scroll="true" data-id="#overviews">
+                            Baca Selengkapnya
                           </a>
                         </div>
                       </div>
@@ -187,16 +155,36 @@
                   <div class="container">
                     <div class="row">
                       <div class="col-md-7 ml-auto text-right">
-                        <h2 class="title">Premium Offers for Venice</h2>
-                        <h5>Now you have no excuses, it's time to surprise your clients, your competitors, and why not, the world. You probably won't have a better chance to show off all your potential if it's not by designing a website for your own agency or web studio.</h5>
+                        <h2 class="title">Training PLC</h2>
+                        <h5>Tingkatkan keahlian engineer untuk meningkatkan produktivitas produksi dengan teknologi berkompetensi industri 4.0.</h5>
                         <br />
                         <div class="buttons">
-                          <a href="#pablo" class="btn btn-neutral btn-link btn-lg">
-                            <i class="fa fa-share-alt"></i> Share Offer
+                          <a href="whatsapp://send?text=https://training.winteq-astra.com" class="btn btn-neutral btn-link btn-lg">
+                            <i class="fa fa-share-alt"></i> Bagikan
                           </a>
-                          <a href="#pablo" class="btn btn-success btn-round btn-lg">
-                            <i class="fa fa-shopping-cart"></i> Shop Now
+                          <a href="<?= base_url(); ?>#contactus" class="btn btn-success btn-round btn-lg" data-scroll="true" data-id="#contact-us">
+                            <i class="fa fa-rocket"></i> Daftar
                           </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="page-header" style="background-image: url('<?= base_url(); ?>assets/img/photo-training-2.jpg')">
+                <div class="filter"></div>
+                <div class="content-center">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-10 ml-auto mr-auto text-center">
+                        <h2 class="title">Pengalaman Belajar yang Menyenangkan</h2>
+                        <h5>Suasana belajar yang menyenangkan, berfokus pada aplikasi dan kondisi proses produksi anda.</h5>
+                        <br />
+                        <h6></h6>
+                        <div class="card-image">
+                            <img class="img" src="<?= base_url(); ?>assets/img/logo-brand.png" />
                         </div>
                       </div>
                     </div>
@@ -224,8 +212,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">Is this what you are looking for?</h2>
-            <h5 class="description">The more formalized version launching today brings a slate of corporate partners and a more structured application review process.</h5>
+            <h2 class="title">Program untuk semua bagian</h2>
+            <h5 class="description">Semua bagian yang terlibat dalam proses produksi bisa mengikuti program training ini.</h5>
           </div>
         </div>
         <div class="row">
@@ -237,29 +225,29 @@
           <div class="col-md-4 offset-1">
             <div class="info info-horizontal">
               <div class="icon icon-info">
-                <i class="nc-icon nc-atom" aria-hidden="true"></i>
+                <i class="nc-icon nc-settings-gear-65" aria-hidden="true"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">For Developers</h4>
-                <p>The moment you use Paper Kit, you know you’ve never felt anything like it. With a single use, is's a powerfull UI Kit</p>
+                <h4 class="info-title">Maintenance</h4>
+                <p>Untuk melakukan perbaikan, preventive ataupun predictive maintenance PLC.</p>
               </div>
             </div>
             <div class="info info-horizontal">
               <div class="icon icon-success">
-                <i class="nc-icon nc-ruler-pencil" aria-hidden="true"></i>
+                <i class="nc-icon nc-bulb-63" aria-hidden="true"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">For Designers Only</h4>
-                <p>The moment you use Paper Kit, you know you’ve never felt anything like it. With a single use, this powerfull UI Kit lets you do more than ever before.</p>
+                <h4 class="info-title">Process Improvement</h4>
+                <p>Mengubah dan Mengembangkan program PLC untuk meningkatkan produktivitas.</p>
               </div>
             </div>
             <div class="info info-horizontal">
               <div class="icon icon-danger">
-                <i class="nc-icon nc-tie-bow" aria-hidden="true"></i>
+                <i class="nc-icon nc-ruler-pencil" aria-hidden="true"></i>
               </div>
               <div class="description">
-                <h4 class="info-title">Beautiful Examples</h4>
-                <p>Speed up your development time or get inspired with the large number of example pages.</p>
+                <h4 class="info-title">Engineering</h4>
+                <p>Membantu memberikan gambaran program PLC untuk pembuatan mesin baru.</p>
               </div>
             </div>
           </div>
@@ -337,8 +325,8 @@
       </div>
     </div>
     <!--     *********    END BLOGS 1      *********      -->
-     <!--     *********     BLOGS 3      *********      -->
-     <div class="blog-3">
+    <!--     *********     BLOGS 3      *********      -->
+    <!-- <div class="blog-3">
       <div class="container">
         <div class="row">
           <div class="col-md-10 ml-auto mr-auto">
@@ -436,7 +424,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--     *********    END BLOGS 3      *********      -->
   </div>
   <div class="section section-pricing cd-section" id="programs">
@@ -456,14 +444,26 @@
               <div class="card-body">
                 <h4 class="card-category">BASIC</h4>
                 <div class="card-icon">
-                  <i class="nc-icon nc-user-run"></i>
+                  <i class="nc-icon nc-hat-3"></i>
                 </div>
-                <h3 class="card-title">$29</h3>
                 <p class="card-description">
                   Here’s a sentence I never expected: we are making...
                 </p>
+                <ul>
+                <li><i class="fa fa-check" aria-hidden="true"></i> Introduction to PLC Family</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> PLC Composition</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Function & Feature</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & I/O Allocation</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Basic Instruction</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Ladder Diagram</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Basic Programming</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Electro Pneumatic</li>
+                </ul>
                 <div class="card-footer">
-                  <a href="#pablo" class="btn btn-info btn-round card-link">Choose Plan</a>
+                  <a href="#" class="btn btn-info btn-round card-link" data-toggle="modal" data-target="#basicModal">Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -473,14 +473,27 @@
               <div class="card-body">
                 <h4 class="card-category">INTERMEDIATE</h4>
                 <div class="card-icon">
-                  <i class="nc-icon nc-istanbul"></i>
+                  <i class="nc-icon nc-tap-01"></i>
                 </div>
-                <h3 class="card-title">$199</h3>
                 <p class="card-description">
-                  This is good if you are a freelancer of photographer.
+                  Here’s a sentence I never expected: we are making...
                 </p>
+                <ul>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Introduction to Modular PLC</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> PLC Composition</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Function & Feature</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & I/O Allocation</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Human Machine Interface (HMI)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Function & Feature (HMI)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Screen designing using HMI</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Screen Upload/Download</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Intermediate Programming</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
+                </ul>
                 <div class="card-footer">
-                  <a href="#pablo" class="btn btn-info btn-round card-link">Choose Plan</a>
+                  <a href="#pablo" class="btn btn-info btn-round card-link" data-toggle="modal" data-target="#intermediateModal">Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -490,14 +503,25 @@
               <div class="card-body">
                 <h3 class="card-category"><b>ADVANCE</b></h3>
                 <div class="card-icon">
-                  <i class="nc-icon nc-air-baloon"></i>
+                  <i class="nc-icon nc-trophy"></i>
                 </div>
-                <h3 class="card-title">$59</h3>
                 <p class="card-description">
-                  Sometimes combining two companies that compete in the same market provides...
+                  Here’s a sentence I never expected: we are making...
                 </p>
+                <ul>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Introduction to PLC with special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> PLC Composition using special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration using special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Function & Feature using special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & Allocation of special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Human Machine Interface (HMI)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Advance Programming for special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Servo Motor</li>
+                </ul>
                 <div class="card-footer">
-                  <a href="#pablo" class="btn btn-neutral btn-round card-link">Choose Plan</a>
+                  <a href="#pablo" class="btn btn-neutral btn-round card-link" data-toggle="modal" data-target="#advanceModal">Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -507,14 +531,21 @@
               <div class="card-body">
                 <h5 class="card-category">ADVANCE NETWORKING</h5>
                 <div class="card-icon">
-                  <i class="nc-icon nc-istanbul"></i>
+                  <i class="nc-icon nc-spaceship"></i>
                 </div>
-                <h3 class="card-title">$199</h3>
                 <p class="card-description">
-                  This is good if you are a freelancer of photographer.
+                  Here’s a sentence I never expected: we are making...
                 </p>
+                <ul>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Communication & Networking System</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Device Net, Controller Link System</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Compo Net System, CC-Link & Ethernet System</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration using Networking</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & memory Allocation using Networking</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
+                </ul>
                 <div class="card-footer">
-                  <a href="#pablo" class="btn btn-info btn-round card-link">Choose Plan</a>
+                  <a href="#pablo" class="btn btn-info btn-round card-link" data-toggle="modal" data-target="#networkModal">Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -523,47 +554,6 @@
       </div>
     </div>
     <!--     *********    END PROGRAMS 3      *********      -->
-     <!--     *********    PRICING 5     *********      -->
-     <div class="pricing-5 section-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2 class="title">SPESIAL TRAINING PROGRAM</h2>
-            <br/>
-            <p class="description text-gray">You have Free Unlimited Updates and Premium Support on each package. You also have 20 days to request a refund if you're not happy with your purchase.</p>
-          </div>
-          <div class="col-md-5 ml-auto">
-            <div class="tab-content text-center">
-              <div class="tab-pane active">
-                <div class="space-top"></div>
-                <div class="row">
-                  <div class="col-md-8">
-                    <div class="card card-pricing">
-                      <div class="card-body">
-                        <h6 class="card-category text-primary">BASIC ELECTRIC</h6>
-                        <h1 class="card-title">$0</h1>
-                        <ul>
-                          <li>
-                            <b>1</b> Developer</li>
-                          <li>
-                            <b>99+</b> Components</li>
-                          <li>
-                            <b>HTML</b> Elements</li>
-                          <li>
-                            <b>14</b> Page Examples</li>
-                        </ul>
-                        <a href="#pablo" class="btn btn-primary btn-round">Free download</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--     *********    END PRICING 5      *********      -->
   </div>
   <div class="section section-team cd-section" id="trainers">
     <!--     *********    TEAM 3     *********      -->
@@ -577,7 +567,7 @@
         </div>
         <div class="space-top"></div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="card card-profile card-plain">
               <div class="row">
                 <div class="col-md-5">
@@ -594,17 +584,12 @@
                     <p class="card-description">
                       Individual commitment to a group effort – that’s what makes a team work, a society work...
                     </p>
-                    <div class="card-footer pull-left">
-                      <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
-                      <a href="#pablo" class="btn btn-just-icon btn-link btn-facebook"><i class="fa fa-facebook"></i></a>
-                      <a href="#pablo" class="btn btn-just-icon btn-link btn-google"><i class="fa fa-google-plus"></i></a>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="card card-profile card-plain">
               <div class="row">
                 <div class="col-md-5">
@@ -621,11 +606,96 @@
                     <p class="card-description">
                       Don't be scared of the truth because we need to restart the human foundation in truth...
                     </p>
-                    <div class="card-footer pull-left">
-                      <a href="#pablo" class="btn btn-just-icon btn-link btn-linkedin"><i class="fa fa-linkedin"></i></a>
-                      <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
-                      <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
-                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="card-img-top">
+                    <a href="#pablo">
+                      <img class="img" src="<?= base_url(); ?>assets/img/faces/ayo-ogunseinde-2.jpg" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body text-left">
+                    <h4 class="card-title">Iksan Santoso</h4>
+                    <h6 class="card-category">Trainer</h6>
+                    <p class="card-description">
+                      Don't be scared of the truth because we need to restart the human foundation in truth...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="card-img-top">
+                    <a href="#pablo">
+                      <img class="img" src="<?= base_url(); ?>assets/img/faces/clem-onojeghuo-3.jpg" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body text-left">
+                    <h4 class="card-title">Bryan</h4>
+                    <h6 class="card-category">Trainer</h6>
+                    <p class="card-description">
+                      Individual commitment to a group effort – that’s what makes a team work, a society work...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="card-img-top">
+                    <a href="#pablo">
+                      <img class="img" src="<?= base_url(); ?>assets/img/faces/ayo-ogunseinde-2.jpg" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body text-left">
+                    <h4 class="card-title">Helmi Wibowo</h4>
+                    <h6 class="card-category">Trainer</h6>
+                    <p class="card-description">
+                      Don't be scared of the truth because we need to restart the human foundation in truth...
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="card-img-top">
+                    <a href="#pablo">
+                      <img class="img" src="<?= base_url(); ?>assets/img/faces/ayo-ogunseinde-2.jpg" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body text-left">
+                    <h4 class="card-title">Choiril Pamungkas</h4>
+                    <h6 class="card-category">Trainer</h6>
+                    <p class="card-description">
+                      Don't be scared of the truth because we need to restart the human foundation in truth...
+                    </p>
                   </div>
                 </div>
               </div>
@@ -641,11 +711,11 @@
      <div class="contactus-1 section-image" style="background-image: url('<?= base_url(); ?>assets/img/sections/winteq.jpg')">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 ml-auto mr-auto">
+          <div class="col-md-12 ml-auto mr-auto">
             <div class="card card-contact no-transition">
               <h3 class="card-title text-center">Daftar Sekarang!</h3>
               <div class="row">
-                <div class="col-md-5 ml-auto">
+                <div class="col-md-4 ml-auto">
                   <div class="card-body">
                     <div class="info info-horizontal">
                       <div class="icon icon-info">
@@ -673,7 +743,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5 col-mb-2 mr-auto">
+                <div class="col-md-6 col-mb-2 mr-auto">
                   <form role="form" id="contact-form" method="post">
                     <div class="card-body">
                       <div class="form-group label-floating">
@@ -689,8 +759,16 @@
                         <input type="text" name="name" class="form-control" placeholder="Nomor HP">
                       </div>
                       <div class="form-group label-floating">
+                        <label class="control-label">Tanggal Lahir</label>
+                        <input type="text" class="form-control datetimepicker" placeholder="" />
+                      </div>
+                      <div class="form-group label-floating">
                         <label class="control-label">Perusahaan</label>
                         <input type="text" name="name" class="form-control" placeholder="Perusahaan">
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Lokasi / Plant Perusahaan</label>
+                        <input type="text" name="name" class="form-control" placeholder="Lokasi / Plant">
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Jabatan</label>
@@ -721,6 +799,18 @@
                           <option>ADVANCE PLC NETWORKING</option>
                         </select>
                       </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Merek PLC</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>MITSUBISHI ELECTRIC</option>
+                          <option>OMRON</option>
+                          <option>SIEMENS</option>
+                        </select>
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Tipe PLC</label>
+                        <input type="text" name="name" class="form-control" placeholder="Tipe PLC">
+                      </div>
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-check">
@@ -731,7 +821,7 @@
                           </div>
                         </div>
                         <div class="col-md-6">
-                          <button type="submit" class="btn btn-primary pull-right" id="submit">DAFTAR</button>
+                          <button type="submit" class="btn btn-lg btn-primary pull-right" id="submit">DAFTAR</button>
                         </div>
                       </div>
                     </div>
@@ -785,6 +875,135 @@
       </li>
     </ul>
   </nav>
+   <!-- basic modal -->
+   <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-basic">
+      <div class="modal-content">
+        <div class="modal-header no-border-header text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h6 class="text-muted">Welcome</h6>
+          <h3 class="modal-title">Paper Kit</h3>
+          <p>Create your account free and secure</p>
+        </div>
+        <div class="modal-body">
+        <div class="row">
+          <h4 class="title">
+            <small>Simple With Actions</small>
+          </h4>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Name</th>
+                  <th>Job Position</th>
+                  <th>Since</th>
+                  <th class="text-right">Salary</th>
+                  <th class="text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>Andrew Mike</td>
+                  <td>Develop</td>
+                  <td>2013</td>
+                  <td class="text-right">&euro; 99,225</td>
+                  <td class="td-actions text-right">
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
+                      <i class="fa fa-user"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
+                      <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
+                      <i class="fa fa-times"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td>John Doe</td>
+                  <td>Design</td>
+                  <td>2012</td>
+                  <td class="text-right">&euro; 89,241</td>
+                  <td class="td-actions text-right">
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
+                      <i class="fa fa-user"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
+                      <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
+                      <i class="fa fa-times"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td>Alex Mike</td>
+                  <td>Design</td>
+                  <td>2010</td>
+                  <td class="text-right">&euro; 92,144</td>
+                  <td class="td-actions text-right">
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
+                      <i class="fa fa-user"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
+                      <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
+                      <i class="fa fa-times"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">4</td>
+                  <td>Mike Monday</td>
+                  <td>Marketing</td>
+                  <td>2013</td>
+                  <td class="text-right">&euro; 49,990</td>
+                  <td class="td-actions text-right">
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
+                      <i class="fa fa-user"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
+                      <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
+                      <i class="fa fa-times"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">5</td>
+                  <td>Paul Dickens</td>
+                  <td>Communication</td>
+                  <td>2016</td>
+                  <td class="text-right">&euro; 69,201</td>
+                  <td class="td-actions text-right">
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
+                      <i class="fa fa-user"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
+                      <i class="fa fa-edit"></i>
+                    </button>
+                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
+                      <i class="fa fa-times"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="modal-footer no-border-footer"></div>
+      </div>
+    </div>
+  </div>
+  <!-- END MODALS  -->
   <footer class="footer footer-black  footer-white ">
     <div class="container">
       <div class="row">
