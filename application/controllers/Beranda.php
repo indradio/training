@@ -28,12 +28,20 @@ class Beranda extends CI_Controller {
 
 		$this->load->helper('string');
 		$password = random_string('alnum',8);
-		$phone = '62'+$this->input->post('phone');
 
 		$data = [
 			'tanggal' => date('Y-m-d H:i:s'),
 			'nama' => $this->input->post('nama'),
 			'email' => $this->input->post('email'),
+			'phone' => $this->input->post('phone'),
+			'tgl_lahir' => $this->input->post('tanggal_lahir'),
+			'perusahaan' => $this->input->post('perusahaan'),
+			'lokasi' => $this->input->post('lokasi'),
+			'jabatan' => $this->input->post('jabatan'),
+			'masa_kerja' => $this->input->post('masa_kerja'),
+			'program' => $this->input->post('program'),
+			'merek' => $this->input->post('merek'),
+			'tipe' => $this->input->post('tipe'),
 			'password' => password_hash($password, PASSWORD_DEFAULT),
 			'status' => '1'
 		];
@@ -57,28 +65,39 @@ class Beranda extends CI_Controller {
 		$this->load->library('email', $config);
 
         // Email dan nama pengirim
-        $this->email->from('no-reply@winteq-astra.com', 'Winteq Training');
+        $this->email->from('no-reply@winteq-astra.com', 'Winteq Technical Training Programs');
 
         // Email penerima
-        $this->email->to('indrada.prayoga@gmail.com'); // Ganti dengan email tujuan
+        $this->email->to($this->input->post('email')); // Ganti dengan email tujuan
 
         // Lampiran email, isi dengan url/path file
         // $this->email->attach('https://masrud.com/content/images/20181215150137-codeigniter-smtp-gmail.png');
 
         // Subject email
-        $this->email->subject('Kirim Email dengan SMTP Gmail CodeIgniter');
+        $this->email->subject('Terima kasih, Pendaftaran anda telah berhasil');
 
         // Isi email
         $this->email->message("Ini adalah contoh email yang dikirim menggunakan SMTP Gmail pada CodeIgniter.<br><br> Klik <strong><a href='https://masrud.com/post/kirim-email-dengan-smtp-gmail' target='_blank' rel='noopener'>disini</a></strong> untuk melihat tutorialnya.");
 
         // Tampilkan pesan sukses atau error
-        if ($this->email->send()) {
-			// echo 'Sukses! email berhasil dikirim.';
-			redirect('beranda');
-        } else {
-            echo 'Error! email tidak dapat dikirim.';
-        }
+        // if ($this->email->send()) {
+		// 	echo 'Sukses! email berhasil dikirim.';
+        // } else {
+        //     echo 'Error! email tidak dapat dikirim.';
+		// }
 
+		$my_apikey = "NQXJ3HED5LW2XV440HCG";
+		$destination = $this->input->post('phone');
+		$message = "*Terima kasih, Pendaftaran anda telah berhasil*" .
+			"\r\n Password". $password .
+			"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
+		$api_url = "http://panel.apiwha.com/send_message.php";
+		$api_url .= "?apikey=" . urlencode($my_apikey);
+		$api_url .= "&number=" . urlencode($destination);
+		$api_url .= "&text=" . urlencode($message);
+		json_decode(file_get_contents($api_url, false));
+
+		redirect('https://training.winteq-astra.com/');
 	}
 
 	public function checkEmail()

@@ -732,7 +732,9 @@
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">No. HP</label>
-                        <input type="number" id="phone" name="phone" class="form-control" placeholder="Nomor HP" required="true" />
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Nomor HP" required="true" />
+                      <p>
+                      <label class="text-info"><span><i class="fa fa-check-circle-o" aria-hidden="true" data-toggle="popover" data-placement="top" title="Notifikasi via WhatsApp" data-content="Mohon menggunakan format 62 sebagai pengganti 0 diawal kemudian diikuti nomor selanjutnya tanpa spasi/pemisah, agar kami bisa mengirimkan notifikasi melalui whatsapp kepada anda."></i> Format 62813XXX </span></label>
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Tanggal Lahir</label>
@@ -756,38 +758,37 @@
                       <div class="form-group label-floating">
                         <label class="control-label">Jabatan</label>
                         <select class="selectpicker" id="jabatan" name="jabatan" data-style="btn-primary select-with-transition" title="Pilih Jabatan" required="true">
-                          <option>Manager</option>
-                          <option>Supervisor</option>
-                          <option>Leader</option>
-                          <option>Teknisi</option>
-                          <option>Operator</option>
+                          <option value="Manager">Manager</option>
+                          <option value="Supervisor">Supervisor</option>
+                          <option value="Leader">Leader</option>
+                          <option value="Teknisi">Teknisi</option>
+                          <option value="Operator">Operator</option>
                         </select>
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Masa Kerja</label>
                         <select class="selectpicker" id="masa_kerja" name="masa_kerja" data-style="btn-primary select-with-transition" title="Pilih Masa Kerja" required="true">
-                          <option>< 1 Tahun</option>
-                          <option>1 - 5 Tahun</option>
-                          <option>6 - 10 Tahun</option>
-                          <option>> 10 Tahun</option>
+                          <option value="0">< 1 Tahun</option>
+                          <option value="1">1 - 5 Tahun</option>
+                          <option value="6">6 - 10 Tahun</option>
+                          <option value="10"> 10 Tahun</option>
                         </select>
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Training Program</label>
                         <select class="selectpicker" id="program" name="program" data-style="btn-primary select-with-transition" title="Pilih Training" required="true">
-                          <option>BASIC ELECTRIC</option>
-                          <option>BASIC PLC</option>
-                          <option>INTERMEDIATE PLC</option>
-                          <option>ADVANCE PLC</option>
-                          <option>ADVANCE PLC NETWORKING</option>
+                          <option value="Basic">BASIC PLC</option>
+                          <option value="Intermediate">INTERMEDIATE PLC</option>
+                          <option value="Advance">ADVANCE PLC</option>
+                          <option value="Networking">ADVANCE PLC NETWORKING</option>
                         </select>
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Merek PLC</label>
                         <select class="selectpicker" id="merek" name="merek" data-style="btn-primary select-with-transition" title="Pilih Merek PLC" required="true">
-                          <option>MITSUBISHI ELECTRIC</option>
-                          <option>OMRON</option>
-                          <option>SIEMENS</option>
+                          <option value="Mitsubishi Electric">MITSUBISHI ELECTRIC</option>
+                          <option value="Omron">OMRON</option>
+                          <option value="Siemens">SIEMENS</option>
                         </select>
                       </div>
                       <div class="form-group label-floating">
@@ -1093,47 +1094,27 @@
               <tbody>
                 <tr>
                   <td class="text-center">1</td>
-                  <td>Introduction to PLC Family</td>
+                  <td>Communication & Networking System</td>
                 </tr>
                 <tr>
                   <td class="text-center">2</td>
-                  <td>PLC Composition: Hardware, Software and Wiring</td>
+                  <td>Device Net System, Controller Link System</td>
                 </tr>
                 <tr>
                   <td class="text-center">3</td>
-                  <td>System Configuration of PLC</td>
+                  <td>Compo Net System, CC Link, Ethernet System & Application</td>
                 </tr>
                 <tr>
                   <td class="text-center">4</td>
-                  <td>Function, Characteristic & Feature of PLC</td>
+                  <td>System Configuration of PLC using Network Module</td>
                 </tr>
                 <tr>
                   <td class="text-center">5</td>
-                  <td>Addressing & I/O Allocation</td>
-                </tr>
-                <tr>
-                  <td class="text-center">6</td>
-                  <td>Basic Instruction: AND, OR, NOT, NAND & NOR</td>
-                </tr>
-                <tr>
-                  <td class="text-center">7</td>
-                  <td>Ladder Diagram</td>
-                </tr>
-                <tr>
-                  <td class="text-center">8</td>
-                  <td>Programming tools (Practice)</td>
-                </tr>
-                <tr>
-                  <td class="text-center">9</td>
-                  <td>Basic Programming: Timer, Counter, Set/Reset, Keep & Ditu/Difd</td>
+                  <td>Addressing & Memory Allocation of Networking Module</td>
                 </tr>
                 <tr>
                   <td class="text-center">10</td>
-                  <td>Application Example (Connect to Sensor, Push button. etc)</td>
-                </tr>
-                <tr>
-                  <td class="text-center">11</td>
-                  <td>Electro Pneumatic</td>
+                  <td>Application Example</td>
                 </tr>
                 <tr>
                 <td></td>
