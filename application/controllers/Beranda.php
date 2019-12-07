@@ -73,7 +73,7 @@ class Beranda extends CI_Controller {
 
         // Tampilkan pesan sukses atau error
         if ($this->email->send()) {
-			echo 'Sukses! email berhasil dikirim.';
+			// echo 'Sukses! email berhasil dikirim.';
 			redirect('beranda');
         } else {
             echo 'Error! email tidak dapat dikirim.';
