@@ -33,6 +33,11 @@
   <!-- CSS Files -->
   <link href="<?= base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="<?= base_url(); ?>assets/css/paper-kit.css?v=2.3.0" rel="stylesheet" />
+  <!-- Ajax Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?= base_url(); ?>assets/demo/demo.css" rel="stylesheet" />
 </head>
@@ -55,12 +60,12 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" data-scroll="true" data-id="#overviews" href="<?= base_url(); ?>#overviews">
-              Overview 
+              Overview
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-scroll="true" data-id="#benefits" href="<?= base_url(); ?>#benefits">
-              Benefit 
+            <a class="nav-link" data-scroll="true" data-id="#fasilitas" href="<?= base_url(); ?>#fasilitas">
+              Fasilitas 
             </a>
           </li>
           <li class="nav-item">
@@ -207,43 +212,43 @@
     <!--     *********    END HEADER 3      *********      -->
   </div>
   <div class="section section-feature cd-section" id="overviews">
-    <!--     *********     OVERVIEWS 4      *********      -->
+    <!--     *********     OVERVIEWS 1      *********      -->
     <div class="features-1">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 ml-auto mr-auto text-center">
+          <div class="col-md-10 ml-auto mr-auto text-center">
             <h2 class="title">Program untuk semua bagian</h2>
-            <h5 class="description">Semua bagian yang terlibat dalam proses produksi bisa mengikuti program training ini.</h5>
+            <h5 class="description">Winteq Technical Training Program membantu anda untuk pengembangan skill dalam waktu yang singkat dan semua bagian yang terlibat dalam proses produksi di perusahaan anda bisa mengikuti program training ini.</h5>
           </div>
         </div>
+        <div class="space-top"></div>
         <div class="row">
-          <div class="col-md-6">
-            <div class="ipad-container">
-              <img src="<?= base_url(); ?>assets/img/sections/ipad.png" />
-            </div>
-          </div>
-          <div class="col-md-4 offset-1">
-            <div class="info info-horizontal">
-              <div class="icon icon-info">
-                <i class="nc-icon nc-settings-gear-65" aria-hidden="true"></i>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="icon icon-danger">
+                <i class="nc-icon nc-settings-gear-65"></i>
               </div>
               <div class="description">
                 <h4 class="info-title">Maintenance</h4>
                 <p>Untuk melakukan perbaikan, preventive ataupun predictive maintenance PLC.</p>
               </div>
             </div>
-            <div class="info info-horizontal">
+          </div>
+          <div class="col-md-4">
+            <div class="info">
               <div class="icon icon-success">
-                <i class="nc-icon nc-bulb-63" aria-hidden="true"></i>
+                <i class="nc-icon nc-bulb-63"></i>
               </div>
               <div class="description">
                 <h4 class="info-title">Process Improvement</h4>
                 <p>Mengubah dan Mengembangkan program PLC untuk meningkatkan produktivitas.</p>
               </div>
             </div>
-            <div class="info info-horizontal">
-              <div class="icon icon-danger">
-                <i class="nc-icon nc-ruler-pencil" aria-hidden="true"></i>
+          </div>
+          <div class="col-md-4">
+            <div class="info">
+              <div class="icon icon-info">
+                <i class="nc-icon nc-ruler-pencil"></i>
               </div>
               <div class="description">
                 <h4 class="info-title">Engineering</h4>
@@ -254,39 +259,32 @@
         </div>
       </div>
     </div>
-    <!--     *********    END OVERVIEWS 4      *********      -->
+    <!--     *********    END OVERVIEWS 1      *********      -->
   </div>
-  <div class="section section-blog cd-section" id="benefits">
+  <div class="section section-blog cd-section" id="fasilitas">
     <!--     *********     BLOGS 1      *********      -->
     <div class="blog-1" id="blog-1">
       <div class="container">
         <div class="row">
           <div class="col-md-10 ml-auto mr-auto">
-            <h2 class="title">Latest Blogposts</h2>
+            <h2 class="title text-center">Fasilitas Training dengan Teknologi Terbaru</h2>
             <br />
             <div class="card card-plain card-blog">
               <div class="row">
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h6 class="card-category text-info">Enterprise</h6>
+                    <h6 class="card-category text-info">In Class Practical Training</h6>
                     <h3 class="card-title">
                       <a href="#pablo">The four waves of augmented reality</a>
                     </h3>
                     <p class="card-description">
-                      Sharing processing, display and sensors across smartphones and tethered smartglasses gives you two batteries, each powering fewer individual systems. If they’re connected by a cable, this could give a healthy bump to battery life — and…
-                      <a href="#pablo"> Read More </a>
-                    </p>
-                    <p class="author">
-                      by
-                      <a href="#pablo">
-                        <b>Tim Merel</b>
-                      </a>, 11 hours ago
+                     Training kami mengedepankan praktek langsung sehingga diharapkan dapat langsung memberikan impact terhadap perusahaan anda.
                     </p>
                   </div>
                 </div>
                 <div class="col-md-5">
                   <div class="card-image">
-                    <img class="img" src="<?= base_url(); ?>assets/img/sections/stephanie-krist.jpg" />
+                    <img class="img" src="<?= base_url(); ?>assets/img/sections/photo-module-training.jpg" />
                   </div>
                 </div>
               </div>
@@ -295,14 +293,12 @@
               <div class="row">
                 <div class="col-md-5">
                   <div class="card-image">
-                    <img class="img" src="<?= base_url(); ?>assets/img/sections/federico-beccari.jpg" />
+                    <img class="img" src="<?= base_url(); ?>assets/img/sections/photo-module-training-kit.jpg" />
                   </div>
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h6 class="card-category text-danger">
-                      <i class="fa fa-free-code-camp" aria-hidden="true"></i> Trending
-                    </h6>
+                  <h6 class="card-category text-info">Modular Training Kit</h6>
                     <h3 class="card-title">
                       <a href="#pablo">Okoli connects you with tour guides around the world</a>
                     </h3>
@@ -450,17 +446,13 @@
                   Here’s a sentence I never expected: we are making...
                 </p>
                 <ul>
-                <li><i class="fa fa-check" aria-hidden="true"></i> Introduction to PLC Family</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of PLC Family</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> PLC Composition</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Feature & Function of PLC</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Function & Feature</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & I/O Allocation</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Basic Instruction</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Ladder Diagram</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Basic Programming</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Electro Pneumatic</li>
                 </ul>
                 <div class="card-footer">
                   <a href="#" class="btn btn-info btn-round card-link" data-toggle="modal" data-target="#basicModal">Selengkapnya</a>
@@ -479,21 +471,16 @@
                   Here’s a sentence I never expected: we are making...
                 </p>
                 <ul>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Introduction to Modular PLC</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> PLC Composition</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of Modular PLC</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Function & Feature</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & I/O Allocation</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Human Machine Interface (HMI)</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Function & Feature (HMI)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Human Machine Interface</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Screen designing using HMI</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Screen Upload/Download</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Intermediate Programming</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
                 </ul>
                 <div class="card-footer">
-                  <a href="#pablo" class="btn btn-info btn-round card-link" data-toggle="modal" data-target="#intermediateModal">Selengkapnya</a>
+                  <a href="#" class="btn btn-info btn-round card-link" data-toggle="modal" data-target="#intermediateModal">Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -509,19 +496,15 @@
                   Here’s a sentence I never expected: we are making...
                 </p>
                 <ul>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Introduction to PLC with special I/O</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> PLC Composition using special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of PLC with special I/O</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration using special I/O</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Function & Feature using special I/O</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & Allocation of special I/O</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Human Machine Interface (HMI)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & Memory Allocation using special I/O</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Advance Programming for special I/O</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Servo Motor</li>
                 </ul>
                 <div class="card-footer">
-                  <a href="#pablo" class="btn btn-neutral btn-round card-link" data-toggle="modal" data-target="#advanceModal">Selengkapnya</a>
+                  <a href="#" class="btn btn-neutral btn-round card-link" data-toggle="modal" data-target="#advanceModal">Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -538,14 +521,12 @@
                 </p>
                 <ul>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Communication & Networking System</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Device Net, Controller Link System</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Compo Net System, CC-Link & Ethernet System</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration using Networking</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & memory Allocation using Networking</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
                 </ul>
                 <div class="card-footer">
-                  <a href="#pablo" class="btn btn-info btn-round card-link" data-toggle="modal" data-target="#networkModal">Selengkapnya</a>
+                  <a href="#" class="btn btn-info btn-round card-link" data-toggle="modal" data-target="#networkModal">Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -569,135 +550,121 @@
         <div class="row">
           <div class="col-md-4">
             <div class="card card-profile card-plain">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="card-img-top">
-                    <a href="#pablo">
-                      <img class="img" src="<?= base_url(); ?>assets/img/faces/clem-onojeghuo-3.jpg" />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body text-left">
+              <div class="card-avatar">
+                <a href="#avatar">
+                  <img src="./assets/img/faces/whs.png" alt="...">
+                </a>
+              </div>
+              <div class="card-body">
+                <a href="#paper-kit">
+                  <div class="author">
                     <h4 class="card-title">Wahyu Hidayat Santoso</h4>
-                    <h6 class="card-category">Trainer</h6>
-                    <p class="card-description">
-                      Individual commitment to a group effort – that’s what makes a team work, a society work...
-                    </p>
+                    <h6 class="card-category text-muted">Trainer</h6>
                   </div>
-                </div>
+                </a>
+                <p class="card-description text-center">
+                  Teamwork is so important that it is virtually impossible for you to reach the heights of your capabilities or make the money that you want without becoming very good at it.
+                </p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-profile card-plain">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="card-img-top">
-                    <a href="#pablo">
-                      <img class="img" src="<?= base_url(); ?>assets/img/faces/ayo-ogunseinde-2.jpg" />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body text-left">
-                    <h4 class="card-title">Irvan Febrinata</h4>
-                    <h6 class="card-category">Trainer</h6>
-                    <p class="card-description">
-                      Don't be scared of the truth because we need to restart the human foundation in truth...
-                    </p>
-                  </div>
-                </div>
+              <div class="card-avatar">
+                <a href="#avatar">
+                  <img src="./assets/img/faces/bry.png" alt="...">
+                </a>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-profile card-plain">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="card-img-top">
-                    <a href="#pablo">
-                      <img class="img" src="<?= base_url(); ?>assets/img/faces/ayo-ogunseinde-2.jpg" />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body text-left">
-                    <h4 class="card-title">Iksan Santoso</h4>
-                    <h6 class="card-category">Trainer</h6>
-                    <p class="card-description">
-                      Don't be scared of the truth because we need to restart the human foundation in truth...
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card card-profile card-plain">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="card-img-top">
-                    <a href="#pablo">
-                      <img class="img" src="<?= base_url(); ?>assets/img/faces/clem-onojeghuo-3.jpg" />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body text-left">
+              <div class="card-body">
+                <a href="#paper-kit">
+                  <div class="author">
                     <h4 class="card-title">Bryan</h4>
-                    <h6 class="card-category">Trainer</h6>
-                    <p class="card-description">
-                      Individual commitment to a group effort – that’s what makes a team work, a society work...
-                    </p>
+                    <h6 class="card-category text-muted">Trainer</h6>
                   </div>
-                </div>
+                </a>
+                <p class="card-description text-center">
+                  A group becomes a team when each member is sure enough of himself and his contribution to praise the skill of the others. No one can whistle a symphony. It takes an orchestra to play it.
+                </p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-profile card-plain">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="card-img-top">
-                    <a href="#pablo">
-                      <img class="img" src="<?= base_url(); ?>assets/img/faces/ayo-ogunseinde-2.jpg" />
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body text-left">
+              <div class="card-avatar">
+                <a href="#avatar">
+                  <img src="./assets/img/faces/hlm.png" alt="...">
+                </a>
+              </div>
+              <div class="card-body">
+                <a href="#paper-kit">
+                  <div class="author">
                     <h4 class="card-title">Helmi Wibowo</h4>
-                    <h6 class="card-category">Trainer</h6>
-                    <p class="card-description">
-                      Don't be scared of the truth because we need to restart the human foundation in truth...
-                    </p>
+                    <h6 class="card-category text-muted">Trainer</h6>
                   </div>
-                </div>
+                </a>
+                <p class="card-description text-center">
+                  The strength of the team is each individual member. The strength of each member is the team. If you can laugh together, you can work together, silence isn’t golden, it’s deadly.
+                </p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card card-profile card-plain">
-              <div class="row">
-                <div class="col-md-5">
-                  <div class="card-img-top">
-                    <a href="#pablo">
-                      <img class="img" src="<?= base_url(); ?>assets/img/faces/ayo-ogunseinde-2.jpg" />
-                    </a>
+              <div class="card-avatar">
+                <a href="#avatar">
+                  <img src="./assets/img/faces/iks.png" alt="...">
+                </a>
+              </div>
+              <div class="card-body">
+                <a href="#paper-kit">
+                  <div class="author">
+                    <h4 class="card-title">Iksan Santoso</h4>
+                    <h6 class="card-category text-muted">Trainer</h6>
                   </div>
-                </div>
-                <div class="col-md-7">
-                  <div class="card-body text-left">
+                </a>
+                <p class="card-description text-center">
+                  Great teams do not hold back with one another. They are unafraid to air their dirty laundry. They admit their mistakes, their weaknesses and their concerns without fear of reprisal.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#avatar">
+                  <img src="./assets/img/faces/ife.png" alt="...">
+                </a>
+              </div>
+              <div class="card-body">
+                <a href="#paper-kit">
+                  <div class="author">
+                    <h4 class="card-title">Irvan Febrinata</h4>
+                    <h6 class="card-category text-muted">Trainer</h6>
+                  </div>
+                </a>
+                <p class="card-description text-center">
+                  Great teams do not hold back with one another. They are unafraid to air their dirty laundry. They admit their mistakes, their weaknesses and their concerns without fear of reprisal.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-profile card-plain">
+              <div class="card-avatar">
+                <a href="#avatar">
+                  <img src="./assets/img/faces/cpa.png" alt="...">
+                </a>
+              </div>
+              <div class="card-body">
+                <a href="#paper-kit">
+                  <div class="author">
                     <h4 class="card-title">Choiril Pamungkas</h4>
-                    <h6 class="card-category">Trainer</h6>
-                    <p class="card-description">
-                      Don't be scared of the truth because we need to restart the human foundation in truth...
-                    </p>
+                    <h6 class="card-category text-muted">Trainer</h6>
                   </div>
-                </div>
+                </a>
+                <p class="card-description text-center">
+                  Great teams do not hold back with one another. They are unafraid to air their dirty laundry. They admit their mistakes, their weaknesses and their concerns without fear of reprisal.
+                </p>
               </div>
             </div>
           </div>
@@ -722,10 +689,12 @@
                         <i class="nc-icon nc-pin-3" aria-hidden="true"></i>
                       </div>
                       <div class="description">
-                        <h4 class="info-title">Find us at the office</h4>
-                        <p> Bld Mihail Kogalniceanu, nr. 8,
-                          <br> 7652 Bucharest,
-                          <br> Romania
+                        <h4 class="info-title">PT Astra Otoparts, Tbk. Divisi WINTEQ</h4>
+                        <p> Jl. Raya Jakarta Bogor Km 47,
+                          <br> Nanggewer Mekar, Cibinong, 
+                          <br> Kab Bogor - Jawa Barat,
+                          <br> Indonesia 16912
+                          <br> Telp. +6221 8790 1703
                         </p>
                       </div>
                     </div>
@@ -734,45 +703,59 @@
                         <i class="nc-icon nc-badge" aria-hidden="true"></i>
                       </div>
                       <div class="description">
-                        <h4 class="info-title">Give us a ring</h4>
-                        <p> Michael Jordan
-                          <br> +40 762 321 762
-                          <br> Mon - Fri, 8:00-22:00
+                        <h4 class="info-title">Hubungi Kami</h4>
+                        <p> Bryan
+                          <br> +62 852-2421-5998
+                          <br> Sen - Jum, 7:30-16:30
+                        </p>
+                          </br>
+                        <p> Wahyu Hidayat santoso
+                          <br> +62 857-6821-8924
+                          <br> Sen - Jum, 7:30-16:30
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-6 col-mb-2 mr-auto">
-                  <form role="form" id="contact-form" method="post">
+                  <form role="form" id="contact-form" method="post"  action="<?= base_url('beranda/daftar'); ?>">
                     <div class="card-body">
                       <div class="form-group label-floating">
                         <label class="control-label">Nama</label>
-                        <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap">
+                        <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Lengkap" required="true" />
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Email address</label>
-                        <input type="email" name="email" class="form-control" placeholder="Email" />
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required="true" />
+                        <p>
+                        <span id="email_result"></span>
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">No. HP</label>
-                        <input type="text" name="name" class="form-control" placeholder="Nomor HP">
+                        <input type="number" id="phone" name="phone" class="form-control" placeholder="Nomor HP" required="true" />
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Tanggal Lahir</label>
-                        <input type="text" class="form-control datetimepicker" placeholder="" />
+                        <div class="input-group date" id="tanggal_lahir">
+                          <input type="text" id="tanggal_lahir" name="tanggal_lahir" class="form-control datepicker" placeholder="Tanggal Lahir" required="true" />
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            </span>
+                          </div>
+                        </div>
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Perusahaan</label>
-                        <input type="text" name="name" class="form-control" placeholder="Perusahaan">
+                        <input type="text" id="perusahaan" name="perusahaan" class="form-control" placeholder="Perusahaan" required="true" />
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Lokasi / Plant Perusahaan</label>
-                        <input type="text" name="name" class="form-control" placeholder="Lokasi / Plant">
+                        <input type="text" id="lokasi" name="lokasi" class="form-control" placeholder="Lokasi / Plant" required="true" />
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Jabatan</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="selectpicker" id="jabatan" name="jabatan" data-style="btn-primary select-with-transition" title="Pilih Jabatan" required="true">
                           <option>Manager</option>
                           <option>Supervisor</option>
                           <option>Leader</option>
@@ -782,7 +765,7 @@
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Masa Kerja</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="selectpicker" id="masa_kerja" name="masa_kerja" data-style="btn-primary select-with-transition" title="Pilih Masa Kerja" required="true">
                           <option>< 1 Tahun</option>
                           <option>1 - 5 Tahun</option>
                           <option>6 - 10 Tahun</option>
@@ -791,7 +774,7 @@
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Training Program</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="selectpicker" id="program" name="program" data-style="btn-primary select-with-transition" title="Pilih Training" required="true">
                           <option>BASIC ELECTRIC</option>
                           <option>BASIC PLC</option>
                           <option>INTERMEDIATE PLC</option>
@@ -801,7 +784,7 @@
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Merek PLC</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="selectpicker" id="merek" name="merek" data-style="btn-primary select-with-transition" title="Pilih Merek PLC" required="true">
                           <option>MITSUBISHI ELECTRIC</option>
                           <option>OMRON</option>
                           <option>SIEMENS</option>
@@ -809,7 +792,7 @@
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Tipe PLC</label>
-                        <input type="text" name="name" class="form-control" placeholder="Tipe PLC">
+                        <input type="text" id="tipe" name="tipe" class="form-control" placeholder="Tipe PLC" required="true" />
                       </div>
                       <div class="row">
                         <div class="col-md-6">
@@ -850,9 +833,9 @@
         </a>
       </li>
       <li>
-        <a href="#benefits" data-number="3">
+        <a href="#fasilitas" data-number="3">
           <span class="cd-dot"></span>
-          <span class="cd-label">Benefit</span>
+          <span class="cd-label">Fasilitas</span>
         </a>
       </li>
       <li>
@@ -876,122 +859,285 @@
     </ul>
   </nav>
    <!-- basic modal -->
-   <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-hidden="false">
+  <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-hidden="false">
     <div class="modal-dialog modal-basic">
       <div class="modal-content">
         <div class="modal-header no-border-header text-center">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h6 class="text-muted">Welcome</h6>
-          <h3 class="modal-title">Paper Kit</h3>
-          <p>Create your account free and secure</p>
+          <h3 class="modal-title">Materi Basic PLC</h3>
         </div>
         <div class="modal-body">
         <div class="row">
-          <h4 class="title">
-            <small>Simple With Actions</small>
-          </h4>
           <div class="table-responsive">
             <table class="table">
               <thead>
                 <tr>
                   <th class="text-center">#</th>
-                  <th>Name</th>
-                  <th>Job Position</th>
-                  <th>Since</th>
-                  <th class="text-right">Salary</th>
-                  <th class="text-right">Actions</th>
+                  <th>Materi</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="text-center">1</td>
-                  <td>Andrew Mike</td>
-                  <td>Develop</td>
-                  <td>2013</td>
-                  <td class="text-right">&euro; 99,225</td>
-                  <td class="td-actions text-right">
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
-                      <i class="fa fa-user"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
-                      <i class="fa fa-edit"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </td>
+                  <td>Introduction to PLC Family</td>
                 </tr>
                 <tr>
                   <td class="text-center">2</td>
-                  <td>John Doe</td>
-                  <td>Design</td>
-                  <td>2012</td>
-                  <td class="text-right">&euro; 89,241</td>
-                  <td class="td-actions text-right">
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
-                      <i class="fa fa-user"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
-                      <i class="fa fa-edit"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </td>
+                  <td>PLC Composition: Hardware, Software and Wiring</td>
                 </tr>
                 <tr>
                   <td class="text-center">3</td>
-                  <td>Alex Mike</td>
-                  <td>Design</td>
-                  <td>2010</td>
-                  <td class="text-right">&euro; 92,144</td>
-                  <td class="td-actions text-right">
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
-                      <i class="fa fa-user"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
-                      <i class="fa fa-edit"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </td>
+                  <td>System Configuration of PLC</td>
                 </tr>
                 <tr>
                   <td class="text-center">4</td>
-                  <td>Mike Monday</td>
-                  <td>Marketing</td>
-                  <td>2013</td>
-                  <td class="text-right">&euro; 49,990</td>
-                  <td class="td-actions text-right">
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
-                      <i class="fa fa-user"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
-                      <i class="fa fa-edit"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </td>
+                  <td>Function, Characteristic & Feature of PLC</td>
                 </tr>
                 <tr>
                   <td class="text-center">5</td>
-                  <td>Paul Dickens</td>
-                  <td>Communication</td>
-                  <td>2016</td>
-                  <td class="text-right">&euro; 69,201</td>
-                  <td class="td-actions text-right">
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="View Profile" class="btn btn-info btn-link btn-sm">
-                      <i class="fa fa-user"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Edit Profile" class="btn btn-success btn-link btn-sm">
-                      <i class="fa fa-edit"></i>
-                    </button>
-                    <button type="button" data-toggle="tooltip" data-placement="top" title data-original-title="Remove" class="btn btn-danger btn-link btn-sm">
-                      <i class="fa fa-times"></i>
-                    </button>
-                  </td>
+                  <td>Addressing & I/O Allocation</td>
+                </tr>
+                <tr>
+                  <td class="text-center">6</td>
+                  <td>Basic Instruction: AND, OR, NOT, NAND & NOR</td>
+                </tr>
+                <tr>
+                  <td class="text-center">7</td>
+                  <td>Ladder Diagram</td>
+                </tr>
+                <tr>
+                  <td class="text-center">8</td>
+                  <td>Programming tools (Practice)</td>
+                </tr>
+                <tr>
+                  <td class="text-center">9</td>
+                  <td>Basic Programming: Timer, Counter, Set/Reset, Keep & Ditu/Difd</td>
+                </tr>
+                <tr>
+                  <td class="text-center">10</td>
+                  <td>Application Example (Connect to Sensor, Push button. etc)</td>
+                </tr>
+                <tr>
+                  <td class="text-center">11</td>
+                  <td>Electro Pneumatic</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="modal-footer no-border-footer"></div>
+      </div>
+    </div>
+  </div>
+   <!-- intermediate modal -->
+   <div class="modal fade" id="intermediateModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-basic">
+      <div class="modal-content">
+        <div class="modal-header no-border-header text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title">Materi Intermediate PLC</h3>
+        </div>
+        <div class="modal-body">
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Materi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>Introduction to Modular PLC</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td>PLC Composition: Hardware, Software & Wiring</td>
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td>System Configuration of PLC (High Speed Input)</td>
+                </tr>
+                <tr>
+                  <td class="text-center">4</td>
+                  <td>Addressing & I/O Allocation</td>
+                </tr>
+                <tr>
+                  <td class="text-center">5</td>
+                  <td>Intermediate Programming and Operation of Programming tools</td>
+                </tr>
+                <tr>
+                  <td class="text-center">6</td>
+                  <td>Human Machine Interface (HMI)/Touchscreen</td>
+                </tr>
+                <tr>
+                  <td class="text-center">7</td>
+                  <td>Function, Characteristic & Feature of HMI</td>
+                </tr>
+                <tr>
+                  <td class="text-center">8</td>
+                  <td>Setup & Integration to PLC</td>
+                </tr>
+                <tr>
+                  <td class="text-center">9</td>
+                  <td>Basic screen designing using HMI programming tools</td>
+                </tr>
+                <tr>
+                  <td class="text-center">10</td>
+                  <td>Screen Upload/Download</td>
+                </tr>
+                <tr>
+                  <td class="text-center">11</td>
+                  <td>Application Examples</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="modal-footer no-border-footer"></div>
+      </div>
+    </div>
+  </div>
+   <!-- Advance modal -->
+   <div class="modal fade" id="advanceModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-basic">
+      <div class="modal-content">
+        <div class="modal-header no-border-header text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title">Materi Advance PLC</h3>
+        </div>
+        <div class="modal-body">
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Materi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>PLC Composition: Hardware, Software and Wiring using I/O</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td>System Configuration of PLC using special I/O</td>
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td>Function, Characteristic & Feature of special I/O</td>
+                </tr>
+                <tr>
+                  <td class="text-center">4</td>
+                  <td>Addressing & I/O Allocation of special I/O</td>
+                </tr>
+                <tr>
+                  <td class="text-center">5</td>
+                  <td>Basic Programming realated to special I/O</td>
+                </tr>
+                <tr>
+                  <td class="text-center">6</td>
+                  <td>Servo Motor</td>
+                </tr>
+                  <td class="text-center">7</td>
+                  <td>Application Example</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="modal-footer no-border-footer"></div>
+      </div>
+    </div>
+  </div>
+   <!-- Network modal -->
+   <div class="modal fade" id="networkModal" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-dialog modal-basic">
+      <div class="modal-content">
+        <div class="modal-header no-border-header text-center">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title">Materi Network PLC</h3>
+        </div>
+        <div class="modal-body">
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Materi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>Introduction to PLC Family</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td>PLC Composition: Hardware, Software and Wiring</td>
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td>System Configuration of PLC</td>
+                </tr>
+                <tr>
+                  <td class="text-center">4</td>
+                  <td>Function, Characteristic & Feature of PLC</td>
+                </tr>
+                <tr>
+                  <td class="text-center">5</td>
+                  <td>Addressing & I/O Allocation</td>
+                </tr>
+                <tr>
+                  <td class="text-center">6</td>
+                  <td>Basic Instruction: AND, OR, NOT, NAND & NOR</td>
+                </tr>
+                <tr>
+                  <td class="text-center">7</td>
+                  <td>Ladder Diagram</td>
+                </tr>
+                <tr>
+                  <td class="text-center">8</td>
+                  <td>Programming tools (Practice)</td>
+                </tr>
+                <tr>
+                  <td class="text-center">9</td>
+                  <td>Basic Programming: Timer, Counter, Set/Reset, Keep & Ditu/Difd</td>
+                </tr>
+                <tr>
+                  <td class="text-center">10</td>
+                  <td>Application Example (Connect to Sensor, Push button. etc)</td>
+                </tr>
+                <tr>
+                  <td class="text-center">11</td>
+                  <td>Electro Pneumatic</td>
+                </tr>
+                <tr>
+                <td></td>
+                <td></td>
                 </tr>
               </tbody>
             </table>
@@ -1062,7 +1208,7 @@
       }
 
       var checker = document.getElementById('check');
-        var sendbtn = document.getElementById('submit');
+      var sendbtn = document.getElementById('submit');
         sendbtn.disabled = true;
         // when unchecked or checked, run the function
         checker.onchange = function() {
@@ -1071,8 +1217,36 @@
             } else {
                 sendbtn.disabled = true;
             }
-
         }
+
+        $('.datepicker').datetimepicker({
+        format: 'DD-MM-YYYY',
+        icons: {
+            time: "fa fa-clock-o",
+            date: "fa fa-calendar",
+            up: "fa fa-chevron-up",
+            down: "fa fa-chevron-down",
+            previous: 'fa fa-chevron-left',
+            next: 'fa fa-chevron-right',
+            today: 'fa fa-screenshot',
+            clear: 'fa fa-trash',
+            close: 'fa fa-remove'
+            }
+          });
+
+          $('#email').change(function(){
+            var email = $('#email').val();
+            if(email != ''){
+              $.ajax({
+                url: "<?php echo base_url(); ?>beranda/checkEmail",
+                method: "POST",
+                data: {email:email},
+                success: function(data){
+                  $('#email_result').html(data);
+              }
+              });
+            }
+          });
 
       // Javascript method's body can be found in assets/js/core/partials/_demo-object.js
       demo.initContactUsMap2();
