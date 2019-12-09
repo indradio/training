@@ -79,28 +79,15 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="<?= base_url(); ?>pretest">
+              PreTest
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="btn btn-round btn-primary" data-scroll="true" data-id="#contact-us" href="<?= base_url(); ?>#contactus">
               <i class="nc-icon nc-send"></i> DAFTAR
             </a>
           </li>
-          <!-- <li class="nav-item">
-					<a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank">
-						<i class="fab fa-twitter"></i>
-						<p class="hidden-lg-up">Twitter</p>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
-						<i class="fab fa-facebook-square"></i>
-						<p class="hidden-lg-up">Facebook</p>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank">
-						<i class="fab fa-instagram"></i>
-						<p class="hidden-lg-up">Instagram</p>
-					</a>
-				</li> -->
         </ul>
       </div>
     </div>

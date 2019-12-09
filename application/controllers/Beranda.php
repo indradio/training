@@ -3,21 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Beranda extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$this->load->view('beranda/index');
@@ -43,6 +28,7 @@ class Beranda extends CI_Controller {
 			'merek' => $this->input->post('merek'),
 			'tipe' => $this->input->post('tipe'),
 			'password' => password_hash($password, PASSWORD_DEFAULT),
+			'role_id' => '3',
 			'status' => '1'
 		];
 		$this->db->insert('peserta', $data);
