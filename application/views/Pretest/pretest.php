@@ -1,10 +1,10 @@
-                    <div class="row">
-	                    <div class="col-md-9">
+<div class="row">
+	                    <div class="col-md-12">
 	                        <div class="card">
-							    <form method="post" action="<?= base_url('pretest/jawab'); ?>">
+							    <form method="post#" action="<?= base_url('pretest/mulai'); ?>">
 		                            <div class="card-header">
 									    <h4 class="card-title">
-											Pertanyaan <span id="soal"><?= $soal['no']; ?></span>
+											Pertanyaan 
 										</h4>
 									</div>
 		                            <div class="card-content">
@@ -83,54 +83,9 @@
 											</button>
                                         </div>
                                     </div>
-                                    <!-- Titip Data -->
-                                    <input type="text" name="no" class="form-control" value="<?= $soal['no']; ?>">
-                                    <input type="text" name="id" class="form-control" value="<?= $soal['id']; ?>">
-                                    <input type="text" name="jawaban" class="form-control" value="<?= $soal['jawaban']; ?>">
 							    </form>
 	                        </div> <!-- end card -->
-	                    </div> <!--  end col-md-6  -->
-	                    <div class="col-md-3">
-	                        <div class="card">
-								<form class="form-horizontal">
-		                            <div class="card-header">
-										<h4 class="card-title">
-										</h4>
-									</div>
-		                            <div class="card-content">
-										<div class="form-group">
-		                                    <label class="col-md-9 control-label"><span id="durasi"></span></label>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-1 control-label"></label>
-                                            <div class="col-md-10">
-                                                <ul class="pagination">
-                                                    <li class="active">
-                                                        <a href="#pdp">1</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#pdp">2</a>
-                                                        <a href="#pdp">3</a>
-                                                        <a href="#pdp">4</a>
-                                                        <a href="#pdp">5</a>
-                                                        <a href="#pdp">6</a>
-                                                        <a href="#pdp">7</a>
-                                                        <a href="#pdp">8</a>
-                                                        <a href="#pdp">9</a>
-                                                        <a href="#pdp">10</a>
-                                                        <a href="#pdp">11</a>
-                                                        <a href="#pdp">12</a>
-                                                        <a href="#pdp">13</a>
-                                                        <a href="#pdp">14</a>
-                                                        <a href="#pdp">15</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-									    </div>
-									</div>
-                                </form>
-                            </div> <!-- end card -->
-	                	</div> <!--  end col-md-3  -->
+	                    </div> <!--  end col-md-12  -->
                     </div> <!-- end row -->
                     <script>
                         // Set the date we're counting down to

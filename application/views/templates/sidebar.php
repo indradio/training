@@ -19,7 +19,7 @@
 						<div class="photo">
 		                    <img src="<?= base_url(); ?>assets/img/faces/face-2.jpg" />
 		                </div>
-	                    <a href="charts.html">
+	                    <a href="#">
 	                        <span><?= $this->session->userdata('nama'); ?></span>
 	                    </a>
 						<div class="clearfix"></div>
