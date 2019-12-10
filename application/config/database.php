@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '45.126.132.181',
-	'username' => 'cpwinteq_root',
-	'password' => 'admin',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'cpwinteq_training',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

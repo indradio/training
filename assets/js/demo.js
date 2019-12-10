@@ -599,7 +599,7 @@ demo = {
                 });
     	} else if(type == 'input-field'){
             swal({
-                    title: 'Input something',
+                    title: 'sss',
                     html: '<div class="form-group">' +
                               '<input id="input-field" type="text" class="form-control" />' +
                           '</div>',
@@ -619,6 +619,7 @@ demo = {
                     })
                 }).catch(swal.noop)
             }
+        
         },
 
     checkFullPageBackgroundImage: function(){
