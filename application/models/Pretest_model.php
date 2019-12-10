@@ -10,12 +10,7 @@ class Pretest_model extends CI_Model
 
     public function get_questions()
     {
-<<<<<<< HEAD
-        $this->db->where('no', '1');
-        $this->db->where('tipe', '1');
-=======
         $t = $this->db->get_where('pretest', ['email' => $this->session->userdata('email')])->row_array();
-
         if($t['soal_1']){
             if($t['soal_2']){
                 if($t['soal_3']){
@@ -80,7 +75,6 @@ class Pretest_model extends CI_Model
 
         $this->db->where('no', $no);
         $this->db->where('tipe', 'A');
->>>>>>> ee88b6f950547b5c585c79ddd4431a021cd73a5c
         $query = $this->db->get("soal");
         return $query->row_array();
     }

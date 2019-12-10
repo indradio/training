@@ -46,51 +46,20 @@ class Pretest extends CI_Controller {
 		// $this->load->view('pretest/index', $data);
 		// $this->load->view('templates/footer');
 	}
-	
-	// public function pretest()
-	// {
-	// 	date_default_timezone_set('asia/jakarta');
-	// 	$pretest = $this->db->get_where('pretest', ['email' => $this->session->userdata('email')])->row_array();
-	// 	$data['title'] = 'Pretest';
-	// 	if($pretest['email']){
-	// 		if($pretest['status']==1){
-	// 			$this->load->model("pretest_model");
-	// 			$data['soal'] = $this->pretest_model->get_questions();
-	// 			$data['pretest'] = $this->pretest_model->get_pretest();
-	// 			$this->load->view('templates/header');
-	// 			$this->load->view('templates/sidebar', $data);
-	// 			$this->load->view('templates/navbar', $data);
-	// 			$this->load->view('pretest/pretest', $data);
-	// 			$this->load->view('templates/footer');
-	// 		}else{
-	// 			$this->load->view('templates/header');
-	// 			$this->load->view('templates/sidebar', $data);
-	// 			$this->load->view('templates/navbar', $data);
-	// 			$this->load->view('pretest/selesai', $data);
-	// 			$this->load->view('templates/footer');
-	// 		}
-	// 	}else{
-	// 		$this->load->view('templates/header');
-	// 		$this->load->view('templates/sidebar', $data);
-	// 		$this->load->view('templates/navbar', $data);
-	// 		$this->load->view('pretest/mulai', $data);
-	// 		$this->load->view('templates/footer');
-	// 	}
-	// }
 
 	public function mulai()
 	{
 		date_default_timezone_set('asia/jakarta');
-<<<<<<< HEAD
-		$this->load->model("pretest_model");
-		$data['title'] = 'Pretest';
-		$data['soal'] = $this->pretest_model->get_questions();
-		$this->load->view('templates/header');
-		$this->load->view('templates/sidebar', $data);
-		$this->load->view('templates/navbar', $data);
-		$this->load->view('pretest/test', $data);
-		$this->load->view('templates/footer');
-    }
+		$data = [
+			'waktu_mulai' => date('Y-m-d H:i:s'),
+			'waktu_selesai' => date('Y-m-d H:i:s', strtotime('+15minute', strtotime( date('Y-m-d H:i:s')))),
+			'nama' => $this->session->userdata('nama'),
+			'email' => $this->session->userdata('email'),
+			'status' => 1
+		];
+		$this->db->insert('pretest', $data);
+		redirect('pretest');
+	}
 
     public function soal()
     {
@@ -122,18 +91,7 @@ class Pretest extends CI_Controller {
     {
     	# code...
     }
-=======
-		$data = [
-			'waktu_mulai' => date('Y-m-d H:i:s'),
-			'waktu_selesai' => date('Y-m-d H:i:s', strtotime('+15minute', strtotime( date('Y-m-d H:i:s')))),
-			'nama' => $this->session->userdata('nama'),
-			'email' => $this->session->userdata('email'),
-			'status' => 1
-		];
-		$this->db->insert('pretest', $data);
-		redirect('pretest');
-	}
-	
+
 	public function jawab()
 	{
 		date_default_timezone_set('asia/jakarta');
@@ -309,5 +267,4 @@ class Pretest extends CI_Controller {
 			
 			redirect('pretest');
 	}
->>>>>>> ee88b6f950547b5c585c79ddd4431a021cd73a5c
 }
