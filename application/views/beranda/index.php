@@ -260,9 +260,8 @@
               <div class="row">
                 <div class="col-md-7">
                   <div class="card-body">
-                    <h6 class="card-category text-info">In Class Practical Training</h6>
                     <h3 class="card-title">
-                      <a href="#pablo">The four waves of augmented reality</a>
+                      <a href="#pablo">Gabungan antara materi teori dan praktik langsung</a>
                     </h3>
                     <p class="card-description">
                      Training kami mengedepankan praktek langsung sehingga diharapkan dapat langsung memberikan impact terhadap perusahaan anda.
@@ -285,19 +284,11 @@
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
-                  <h6 class="card-category text-info">Modular Training Kit</h6>
                     <h3 class="card-title">
-                      <a href="#pablo">Okoli connects you with tour guides around the world</a>
+                      <a href="#pablo">Training kit yang sesuai dengan kondisi plant produksi</a>
                     </h3>
                     <p class="card-description">
-                      Okoli is a new service by developer Jack Deneut that aims to replace those ugly little cards you find in tourist hotels. The web app, which currently works in Prague, Budapest, Berlin and Paris, lets you reserve a nearly private tour with a professional guid — and…
-                      <a href="#pablo"> Read More </a>
-                    </p>
-                    <p class="author">
-                      by
-                      <a href="#pablo">
-                        <b>John Biggs</b>
-                      </a>, 3 seconds ago
+                    Perangkat-perangkat yang digunakan disesuaikan dengan yang biasa dipakai di area produksi sehingga peserta mempelajari apa yang memang mereka butuhkan.
                     </p>
                   </div>
                 </div>
@@ -415,9 +406,9 @@
     <div class="pricing-3 section-image" style="background-image: url('<?= base_url(); ?>assets/img/sections/training-pics.jpg')">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 ml-auto mr-auto text-center">
-            <h2 class="title">Pick the best plan for you</h2>
-            <h5 class="description">You have Free Unlimited Updates and Premium Support on each package.</h5>
+          <div class="col-md-8 ml-auto mr-auto text-center">
+            <h2 class="title">Pilih kelas yang paling cocok untuk anda</h2>
+            <h5 class="description">Pelajari silabus lengkap untuk setiap kelas training yang tersedia. kami akan mengkonfirmasinya dengan hasil pretest.</h5>
           </div>
         </div>
         <div class="space-top"></div>
@@ -529,8 +520,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">The Expert Trainers</h2>
-            <h5 class="description">This is the paragraph where you can write more details about your team. Keep you user engaged by providing meaningful information.</h5>
+            <h2 class="title">Trainer Berpengalaman di Bidangnya</h2>
+            <h5 class="description">Dengan dibantu oleh trainer yang handal membuat pengalaman belajar anda lebih mudah.</h5>
           </div>
         </div>
         <div class="space-top"></div>
@@ -549,9 +540,9 @@
                     <h6 class="card-category text-muted">Trainer</h6>
                   </div>
                 </a>
-                <p class="card-description text-center">
+                <!-- <p class="card-description text-center">
                   Teamwork is so important that it is virtually impossible for you to reach the heights of your capabilities or make the money that you want without becoming very good at it.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -569,9 +560,9 @@
                     <h6 class="card-category text-muted">Trainer</h6>
                   </div>
                 </a>
-                <p class="card-description text-center">
+                <!-- <p class="card-description text-center">
                   A group becomes a team when each member is sure enough of himself and his contribution to praise the skill of the others. No one can whistle a symphony. It takes an orchestra to play it.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -589,9 +580,9 @@
                     <h6 class="card-category text-muted">Trainer</h6>
                   </div>
                 </a>
-                <p class="card-description text-center">
+                <!-- <p class="card-description text-center">
                   The strength of the team is each individual member. The strength of each member is the team. If you can laugh together, you can work together, silence isn’t golden, it’s deadly.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -609,9 +600,9 @@
                     <h6 class="card-category text-muted">Trainer</h6>
                   </div>
                 </a>
-                <p class="card-description text-center">
+                <!-- <p class="card-description text-center">
                   Great teams do not hold back with one another. They are unafraid to air their dirty laundry. They admit their mistakes, their weaknesses and their concerns without fear of reprisal.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -629,9 +620,9 @@
                     <h6 class="card-category text-muted">Trainer</h6>
                   </div>
                 </a>
-                <p class="card-description text-center">
+                <!-- <p class="card-description text-center">
                   Great teams do not hold back with one another. They are unafraid to air their dirty laundry. They admit their mistakes, their weaknesses and their concerns without fear of reprisal.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -649,9 +640,9 @@
                     <h6 class="card-category text-muted">Trainer</h6>
                   </div>
                 </a>
-                <p class="card-description text-center">
+                <!-- <p class="card-description text-center">
                   Great teams do not hold back with one another. They are unafraid to air their dirty laundry. They admit their mistakes, their weaknesses and their concerns without fear of reprisal.
-                </p>
+                </p> -->
               </div>
             </div>
           </div>
@@ -690,6 +681,7 @@
                         <i class="nc-icon nc-badge" aria-hidden="true"></i>
                       </div>
                       <div class="description">
+                        <h4 class="info-title">Pertanyaan?</h4>
                         <h4 class="info-title">Hubungi Kami</h4>
                         <p> Bryan
                           <br> +62 852-2421-5998
@@ -712,18 +704,6 @@
                         <input type="text" id="nama" name="nama" class="form-control" placeholder="Nama Lengkap" required="true" />
                       </div>
                       <div class="form-group label-floating">
-                        <label class="control-label">Email address</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required="true" />
-                        <p>
-                        <span id="email_result"></span>
-                      </div>
-                      <div class="form-group label-floating">
-                        <label class="control-label">No. HP</label>
-                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Nomor HP" required="true" />
-                      <p>
-                      <label class="text-info"><span><i class="fa fa-check-circle-o" aria-hidden="true" data-toggle="popover" data-placement="top" title="Notifikasi via WhatsApp" data-content="Mohon menggunakan format 62 sebagai pengganti 0 diawal kemudian diikuti nomor selanjutnya tanpa spasi/pemisah, agar kami bisa mengirimkan notifikasi melalui whatsapp kepada anda."></i> Format 62813XXX </span></label>
-                      </div>
-                      <div class="form-group label-floating">
                         <label class="control-label">Tanggal Lahir</label>
                         <div class="input-group date" id="tanggal_lahir">
                           <input type="text" id="tanggal_lahir" name="tanggal_lahir" class="form-control datepicker" placeholder="Tanggal Lahir" required="true" />
@@ -733,6 +713,38 @@
                             </span>
                           </div>
                         </div>
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Email address</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required="true" />
+                        <p>
+                        <span id="email_result"></span>
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">No. HP</label>
+                        <div class="input-group">
+                          <div class="input-group-append">
+                            <span class="input-group-text">+62</span>
+                            <span></span>
+                          </div>
+                          <input type="text" id="phone" name="phone" class="form-control" placeholder="Nomor HP" required="true" />
+                          </div>
+                          <p>
+                      <label class="text-info"><span><i class="fa fa-check-circle-o" aria-hidden="true" data-toggle="popover" data-placement="top" title="Notifikasi via WhatsApp" data-content="Kami menggunakan format '+62' sebagai pengganti '0' (NOL) diawal, kemudian silahkan diikuti nomor selanjutnya tanpa spasi/pemisah, agar kami bisa mengirimkan notifikasi melalui whatsapp kepada anda."></i> Format 62813XXXXXXX </span></label>
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Pendidikan Akademik</label>
+                        <select class="selectpicker" id="pendidikan" name="pendidikan" data-style="btn-primary select-with-transition" title="Pilih Pendidikan" required="true">
+                          <option value="D3">D3</option>
+                          <option value="S1">S1</option>
+                          <option value="S2">S2</option>
+                          <option value="S3">S3</option>
+                          <option value="Lainnya">Lainnya</option>
+                        </select>
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Jurusan Akademik</label>
+                        <input type="text" id="jurusan" name="jurusan" class="form-control" placeholder="Jurusan Akademik" required="true" />
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Perusahaan</label>
@@ -762,12 +774,23 @@
                         </select>
                       </div>
                       <div class="form-group label-floating">
+                        <label class="control-label">Harapan training akan dilaksanakan</label>
+                        <div class="input-group date">
+                          <input type="text" id="tanggal_training" name="tanggal_training" class="form-control datepicker" placeholder="Pilih Tanggal" required="true" />
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group label-floating">
                         <label class="control-label">Training Program</label>
                         <select class="selectpicker" id="program" name="program" data-style="btn-primary select-with-transition" title="Pilih Training" required="true">
-                          <option value="Basic">BASIC PLC</option>
-                          <option value="Intermediate">INTERMEDIATE PLC</option>
-                          <option value="Advance">ADVANCE PLC</option>
-                          <option value="Networking">ADVANCE PLC NETWORKING</option>
+                          <option data-subtext="(2 Hari)" value="Basic">BASIC PLC</option>
+                          <option data-subtext="(2 Hari)" value="Intermediate">INTERMEDIATE PLC</option>
+                          <option data-subtext="(3 Hari)" value="Advance">ADVANCE PLC</option>
+                          <option data-subtext="(3 Hari)" value="Networking">ADVANCE PLC NETWORKING</option>
                         </select>
                       </div>
                       <div class="form-group label-floating">
@@ -780,18 +803,22 @@
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Tipe PLC</label>
-                        <input type="text" id="tipe" name="tipe" class="form-control" placeholder="Tipe PLC" required="true" />
+                        <input type="text" id="tipe" name="tipe" class="form-control" placeholder="PLC CJ2M Series, Mitsubishi Q Series" required="true" />
+                      </div>
+                      <div class="form-group label-floating">
+                        <label class="control-label">Harapan anda mengikuti training.</label>
+                        <textarea class="form-control border-input" id="harapan" name="harapan" placeholder="Tuliskan apa yang ingin anda dapatkan dengan training ini." rows="3" required="true"></textarea>
                       </div>
                       <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox" id="check" value="" required="true"> I'm not a robot !
+                              <input class="form-check-input" type="checkbox" id="check" value="" required="true">Saya sudah membaca dengan seksama dan mengerti informasi-informasi di atas terutama untuk silabus dari tiap kelas yang tersedia dan saya sudah memberikan informasi yang benar.
                               <span class="form-check-sign"></span>
                             </label>
                           </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                           <button type="submit" class="btn btn-lg btn-primary pull-right" id="submit">DAFTAR</button>
                         </div>
                       </div>
