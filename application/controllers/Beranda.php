@@ -11,6 +11,7 @@ class Beranda extends CI_Controller {
 	{
 		date_default_timezone_set('asia/jakarta');
 
+		$tanggal_lahir = date('Y-m-d', strtotime($this->input->post('tanggal_lahir')));
 		$this->load->helper('string');
 		$password = random_string('alnum',8);
 
@@ -19,7 +20,7 @@ class Beranda extends CI_Controller {
 			'nama' => $this->input->post('nama'),
 			'email' => $this->input->post('email'),
 			'phone' => $this->input->post('phone'),
-			'tgl_lahir' => $this->input->post('tanggal_lahir'),
+			'tgl_lahir' => $tanggal_lahir,
 			'perusahaan' => $this->input->post('perusahaan'),
 			'lokasi' => $this->input->post('lokasi'),
 			'jabatan' => $this->input->post('jabatan'),
@@ -75,7 +76,7 @@ class Beranda extends CI_Controller {
 		$my_apikey = "NQXJ3HED5LW2XV440HCG";
 		$destination = $this->input->post('phone');
 		$message = "*Terima kasih, Pendaftaran anda telah berhasil*" .
-			"\r\n Password". $password .
+			"\r\nPassword : ". $password .
 			"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
 		$api_url = "http://panel.apiwha.com/send_message.php";
 		$api_url .= "?apikey=" . urlencode($my_apikey);
@@ -83,7 +84,7 @@ class Beranda extends CI_Controller {
 		$api_url .= "&text=" . urlencode($message);
 		json_decode(file_get_contents($api_url, false));
 
-		redirect('https://training.winteq-astra.com/');
+		redirect('https://training.winteq-astra.com/pretest');
 	}
 
 	public function checkEmail()

@@ -17,7 +17,7 @@
 				<div class="user">
 	                <div class="info">
 						<div class="photo">
-		                    <img src="<?= base_url(); ?>assets/img/faces/face-2.jpg" />
+		                    <img src="<?= base_url(); ?>assets/img/faces/face-1.jpg" />
 		                </div>
 	                    <a href="#">
 	                        <span><?= $this->session->userdata('nama'); ?></span>
