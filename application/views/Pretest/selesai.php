@@ -8,7 +8,6 @@
 										</h4>
 									</div>
 		                            <div class="card-content">
-                                       
                                     </div>
 							    </form>
 	                        </div> <!-- end card -->
