@@ -19,6 +19,8 @@ class Beranda extends CI_Controller {
 		$data = [
 			'tanggal' => date('Y-m-d H:i:s'),
 			'nama' => $this->input->post('nama'),
+			'gender' => $this->input->post('gender'),
+			'makanan' => $this->input->post('makanan'),
 			'email' => $this->input->post('email'),
 			'phone' => '0'.$this->input->post('phone'),
 			'tgl_lahir' => $tanggal_lahir,

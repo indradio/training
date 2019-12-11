@@ -4,8 +4,14 @@
 							    <form method="post#" action="<?= base_url('pretest/mulai'); ?>">
 		                            <div class="card-header">
 									    <h4 class="card-title">
-											Siap 
-										</h4>
+                                        Test akan segera dimulai, perhatikan hal-hal berikut sebelum memulai test:
+                                        </h4>
+                                        <P>
+                                        </br>1. Test akan dilakukan dalam 15 Menit.
+                                        </br>2. Selama test, waktu akan terus berjalan bahkan jika anda tinggalkan.
+                                        </br>3. Sebaiknya anda selesaikan dulu pekerjaan lain yang dapat mengganggu tes.
+                                        </br>4. Sebaiknya matikan ponsel anda selama tes berlangsung.
+                                        </br>5. Soal yang sudah dijawab tidak dapat diulang.
 									</div>
 		                            <div class="card-content">
                                         <div class="form-group text-right">
@@ -13,7 +19,7 @@
                                                 <span class="btn-label">
                                                     <i class="ti-pencil-alt"></i>
 	                                            </span>
-                                                Mulai
+                                                Saya Siap, Mulai Test
 											</button>
                                         </div>
                                     </div>
