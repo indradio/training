@@ -72,13 +72,8 @@ class Beranda extends CI_Controller {
 
         // Isi email
         $this->email->message("Dear ".$this->input->post('nama') ."<p>Password anda : ".$password."<p>Silahkan mengikuti PRETEST di link berikut <a href='https://training.winteq-astra.com/pretest' target='_blank'>Winteq Technical Training Programs (PRETEST)</a>");
-
-        // Tampilkan pesan sukses atau error
-        // if ($this->email->send()) {
-		// 	echo 'Sukses! email berhasil dikirim.';
-        // } else {
-        //     echo 'Error! email tidak dapat dikirim.';
-		// }
+		
+		// Kirim via Whatsapp
 
 		$my_apikey = "NQXJ3HED5LW2XV440HCG";
 		$destination = '62'.$this->input->post('phone');
@@ -94,7 +89,7 @@ class Beranda extends CI_Controller {
 		$api_url .= "&text=" . urlencode($message);
 		json_decode(file_get_contents($api_url, false));
 
-		redirect('https://training.winteq-astra.com/pretest');
+		redirect('beranda/berhasil/' . $password);
 	}
 
 	public function checkEmail()
@@ -107,5 +102,11 @@ class Beranda extends CI_Controller {
 		 else {
 		  echo '<label class="text-success"><span><i class="fa fa-check-circle-o" aria-hidden="true"></i> Email is available</span></label>';
 		 }
+	}
+
+	public function berhasil($password)
+	{
+        $data['password']=$password;
+		$this->load->view('beranda/berhasil',$data);
 	}
 }

@@ -37,9 +37,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="<?= base_url(); ?>assets/demo/demo.css" rel="stylesheet" />
 </head>
 
 <body class="sections-page sidebar-collapse">
@@ -260,8 +257,9 @@
               <div class="row">
                 <div class="col-md-7">
                   <div class="card-body">
+                  <h6 class="card-category text-danger">Teori X Praktik</h6>
                     <h3 class="card-title">
-                      <a href="#pablo">Gabungan antara materi teori dan praktik langsung</a>
+                      Gabungan antara materi teori dan praktik langsung
                     </h3>
                     <p class="card-description">
                      Training kami mengedepankan praktek langsung sehingga diharapkan dapat langsung memberikan impact terhadap perusahaan anda.
@@ -284,8 +282,9 @@
                 </div>
                 <div class="col-md-7">
                   <div class="card-body">
+                  <h6 class="card-category text-primary">Training Kit</h6>
                     <h3 class="card-title">
-                      <a href="#pablo">Training kit yang sesuai dengan kondisi plant produksi</a>
+                      Training kit yang sesuai dengan kondisi plant produksi
                     </h3>
                     <p class="card-description">
                     Perangkat-perangkat yang digunakan disesuaikan dengan yang biasa dipakai di area produksi sehingga peserta mempelajari apa yang memang mereka butuhkan.
@@ -722,8 +721,8 @@
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Tanggal Lahir*</label>
-                        <div class="input-group date" id="tanggal_lahir">
-                          <input type="text" id="tanggal_lahir" name="tanggal_lahir" class="form-control datepicker" placeholder="Tanggal Lahir" required="true" />
+                        <div class="input-group date">
+                          <input type="text" id="tanggal_lahir" name="tanggal_lahir" class="form-control datetimepicker" placeholder="Tanggal Lahir" required="true" />
                           <div class="input-group-append">
                             <span class="input-group-text">
                               <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></span>
@@ -780,6 +779,7 @@
                           <option value="Leader">Leader</option>
                           <option value="Teknisi">Teknisi</option>
                           <option value="Operator">Operator</option>
+                          <option value="Lainnya">Lainnya</option>
                         </select>
                       </div>
                       <div class="form-group label-floating">
@@ -795,7 +795,7 @@
                       <div class="form-group label-floating">
                         <label class="control-label">Harapan training akan dilaksanakan*</label>
                         <div class="input-group date">
-                          <input type="text" id="tanggal_training" name="tanggal_training" class="form-control datepicker" placeholder="Pilih Tanggal" required="true" />
+                          <input type="text" id="tanggal_training" name="tanggal_training" class="form-control datetimepicker" placeholder="Pilih Tanggal" required="true" />
                           <div class="input-group-append">
                             <span class="input-group-text">
                               <span class="glyphicon glyphicon-calendar"><i class="fa fa-calendar" aria-hidden="true"></i></span>
@@ -1240,7 +1240,7 @@
             }
         }
 
-        $('.datepicker').datetimepicker({
+        $('.datetimepicker').datetimepicker({
         format: 'DD-MM-YYYY',
         icons: {
             time: "fa fa-clock-o",
@@ -1253,21 +1253,21 @@
             clear: 'fa fa-trash',
             close: 'fa fa-remove'
           }
-          });
+        });
 
-          $('#email').change(function(){
-            var email = $('#email').val();
-            if(email != ''){
-              $.ajax({
-                url: "<?php echo base_url(); ?>beranda/checkEmail",
-                method: "POST",
-                data: {email:email},
-                success: function(data){
-                  $('#email_result').html(data);
-              }
-              });
+        $('#email').change(function(){
+          var email = $('#email').val();
+          if(email != ''){
+            $.ajax({
+              url: "<?php echo base_url(); ?>beranda/checkEmail",
+              method: "POST",
+              data: {email:email},
+              success: function(data){
+                $('#email_result').html(data);
             }
           });
+          }
+        });
 
       // Javascript method's body can be found in assets/js/core/partials/_demo-object.js
       demo.initContactUsMap2();
