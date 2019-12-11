@@ -405,12 +405,13 @@
     <div class="pricing-3 section-image" style="background-image: url('<?= base_url(); ?>assets/img/sections/training-pics.jpg')">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 ml-auto mr-auto text-center">
+          <div class="col-md-9 ml-auto mr-auto text-center">
             <h2 class="title">Pilih kelas yang paling cocok untuk anda</h2>
-            <h5 class="description">Pelajari silabus lengkap untuk setiap kelas training yang tersedia. kami akan mengkonfirmasinya dengan hasil pretest.</h5>
+            <h5 class="description">Pelajari silabus lengkap untuk setiap kelas training yang tersedia. kami akan mengkonfirmasinya dengan hasil pretest anda.</h5>
+</br>
+</br>
           </div>
         </div>
-        <div class="space-top"></div>
         <div class="row">
           <div class="col-md-3 ml-auto mr-auto">
             <div class="card card-pricing">
