@@ -421,7 +421,7 @@
                   <i class="nc-icon nc-hat-3"></i>
                 </div>
                 <p class="card-description">
-                  Here’s a sentence I never expected: we are making...
+                Belajar PLC dari dasar, komunikasi antara software dan PLC.
                 </p>
                 <ul>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of PLC Family</li>
@@ -446,7 +446,7 @@
                   <i class="nc-icon nc-tap-01"></i>
                 </div>
                 <p class="card-description">
-                  Here’s a sentence I never expected: we are making...
+                Instruksi-instruksi PLC lanjutan menggunakan Human Machine Interface.
                 </p>
                 <ul>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of Modular PLC</li>
@@ -471,7 +471,7 @@
                   <i class="nc-icon nc-trophy"></i>
                 </div>
                 <p class="card-description">
-                  Here’s a sentence I never expected: we are making...
+                Membuat program PLC dari awal untuk sebuah projek.
                 </p>
                 <ul>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of PLC with special I/O</li>
@@ -495,7 +495,7 @@
                   <i class="nc-icon nc-spaceship"></i>
                 </div>
                 <p class="card-description">
-                  Here’s a sentence I never expected: we are making...
+                Menghubungkan PLC dengan perangkat kontrol lainnya.
                 </p>
                 <ul>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Communication & Networking System</li>
