@@ -752,7 +752,7 @@
                       <div class="form-group label-floating">
                         <label class="control-label">Pendidikan Akademik*</label>
                         <select class="selectpicker" id="pendidikan" name="pendidikan" data-style="btn-primary select-with-transition" title="Pilih Pendidikan" required="true">
-                          <option value="SMA/SMK">SMA/SMK</option>
+                          <option value="SMA/SMK">SMA/SMK/SEDERAJAT</option>
                           <option value="D3">D3</option>
                           <option value="S1">S1</option>
                           <option value="S2">S2</option>
