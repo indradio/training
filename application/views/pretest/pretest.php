@@ -16,72 +16,79 @@
                                             </br>
                                             <?php } ?>
                                             <span id="pertanyaan"><?= $soal['pertanyaan']; ?></span>
-	                                    </div>
-	                                    <div class="form-group">
-                                            <label>Pilihan Jawaban</label>
+                                        </div>
+                                        <label>Pilihan Jawaban</label>
                                             <p>
-                                            <div class=" btn-group-toggle" data-toggle="buttons">
-                                                <!-- Gunakan if sebelum gambar -->
-                                                <?php if ($soal['gambar_a']){ ?>
+                                            <?php if ($soal['gambar_a']){ ?>
                                                     <div class="photo">
                                                         <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_a']; ?>" />
                                                     </div>
-                                                    </br>
                                                 <?php } ?>
-                                                <label class="btn btn-info">
-                                                    <input type="radio" name="options" id="option1" autocomplete="off" value="A" required>A. <?= $soal['pilihan_a']; ?>
-                                                </label>
-                                                </br>
-                                                <?php if ($soal['gambar_b']){ ?>
-                                                <p>
+                                            <span id="pertanyaan">A. <?= $soal['pilihan_a']; ?></span>
+                                            <p>
+                                            <?php if ($soal['gambar_b']){ ?>
                                                 <div class="photo">
                                                     <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_b']; ?>" />
                                                 </div>
                                                 <?php } ?>
-                                                </br>
-                                                <label class="btn btn-info">
-                                                    <input type="radio" name="options" id="option2" autocomplete="off" value="B" required>B. <?= $soal['pilihan_b']; ?>
-                                                </label>
-                                                </br>
-                                                <?php if ($soal['gambar_c']){ ?>
-                                                <p>
+                                            <span id="pertanyaan">B. <?= $soal['pilihan_b']; ?></span>
+                                            <p>
+                                            <?php if ($soal['gambar_c']){ ?>
                                                 <div class="photo">
                                                     <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_c']; ?>" />
                                                 </div>
                                                 <?php } ?>
-                                                </br>
-                                                <label class="btn btn-info">
-                                                    <input type="radio" name="options" id="option3" autocomplete="off" value="C" required>C. <?= $soal['pilihan_c']; ?>
-                                                </label>
-                                                </br>
-                                                <?php if ($soal['gambar_c']){ ?>
-                                                <p>
+                                            <span id="pertanyaan">C. <?= $soal['pilihan_c']; ?></span>
+                                            <p>
+                                            <?php if ($soal['gambar_d']){ ?>
                                                 <div class="photo">
                                                     <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_d']; ?>" />
                                                 </div>
                                                 <?php } ?>
-                                                </br>
-                                                <label class="btn btn-info">
-                                                    <input type="radio" name="options" id="option4" autocomplete="off" value="D" required>D. <?= $soal['pilihan_d']; ?>
-                                                </label>
+                                            <span id="pertanyaan">D. <?= $soal['pilihan_d']; ?></span>
+                                            <p>
+                                            <?php if ($soal['gambar_d']){ ?>
+                                            <p>
+                                            <?php } ?>
+                                            <span id="pertanyaan">E. Tidak tahu</span>
+                                            <div class="form-group text-left">
+                                                <label>Jawab</label>
+                                                <p>    
+                                                <div class="btn-group-toggle text-left" data-toggle="buttons">
+                                                    <label class="btn btn-info">
+                                                            <input type="radio" name="options" id="option1" autocomplete="off" value="A" required>A
+                                                        </label>
+                                                    <label class="btn btn-info">
+                                                            <input type="radio" name="options" id="option2" autocomplete="off" value="B" required>B
+                                                        </label>
+                                                    <label class="btn btn-info">
+                                                            <input type="radio" name="options" id="option3" autocomplete="off" value="C" required>C
+                                                        </label>
+                                                    <label class="btn btn-info">
+                                                            <input type="radio" name="options" id="option4" autocomplete="off" value="D" required>D
+                                                        </label>
+                                                    <label class="btn btn-info">
+                                                            <input type="radio" name="options" id="option5" autocomplete="off" value="E" required>E
+                                                        </label>
+                                                </div>   
                                             </div>
-                                        </div>
-                                        </br>
-                                        <div class="form-group text-right">
-                                            <!-- <button type="button" class="btn btn-wd btn-success btn-fill btn-move-left">
-	                                            <span class="btn-label">
-	                                                <i class="ti-angle-left"></i>
-	                                            </span>
-	                                            Back
-	                                        </button> -->
+                                            </br>
+                                            <div class="form-group text-right">
 
-	                                        <button type="submit" class="btn btn-wd btn-success btn-fill btn-move-right">
-												Next
-	                                            <span class="btn-label">
-	                                                <i class="ti-angle-right"></i>
-	                                            </span>
-											</button>
-                                        </div>
+                                                <!-- <button type="button" class="btn btn-wd btn-success btn-fill btn-move-left">
+                                                    <span class="btn-label">
+                                                        <i class="ti-angle-left"></i>
+                                                    </span>
+                                                    Back
+                                                </button> -->
+
+                                                <button type="submit" class="btn btn-wd btn-success btn-fill btn-move-right">
+                                                    Next
+                                                    <span class="btn-label">
+                                                        <i class="ti-angle-right"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
                                     </div>
                                     <!-- Titip Data -->
                                     <input type="text" name="no" class="form-control hidden" value="<?= $soal['no']; ?>">

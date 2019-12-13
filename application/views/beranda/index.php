@@ -684,12 +684,12 @@
                         <h4 class="info-title">Pertanyaan?</h4>
                         <h4 class="info-title">Hubungi Kami</h4>
                         <p> Bryan
-                          <br> <a href="https://wa.me/6285224215998?text=Hai%20bryan,%20mau%20tanya-tanya%20training%20dong?%20" target="_blank">+62 852-2421-5998</a>
+                          <br> <a href="https://wa.me/6285224215998?text=Hai%20bryan,%20mau%20tanya-tanya%20training%20dong?%20" target="_blank" class="text-primary">+62 852-2421-5998 </br><small>(Klik untuk chat Whatsapp)</small></a>
                           <br> Sen - Jum, 7:30-16:30
                         </p>
                           </br>
                         <p> Wahyu Hidayat santoso
-                          <br> <br> <a href="https://wa.me/6285768218924?text=Hai%20wahyu,%20mau%20tanya-tanya%20training%20dong?%20" target="_blank">+62 857-6821-8924</a>
+                          <br> <a href="https://wa.me/6285768218924?text=Hai%20wahyu,%20mau%20tanya-tanya%20training%20dong?%20" target="_blank" class="text-primary">+62 857-6821-8924 </br><small>(Klik untuk chat Whatsapp)</small></a>
                           <br> Sen - Jum, 7:30-16:30
                         </p>
                       </div>

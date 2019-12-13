@@ -267,4 +267,17 @@ class Pretest extends CI_Controller {
 			
 			redirect('pretest');
 	}
+
+	public function hasil()
+	{
+		date_default_timezone_set('asia/jakarta');
+		$this->load->model("pretest_model");
+		$data['title'] = 'Hasil Pretest';
+		// $data['hasil'] = $this->pretest_model->get_hasil();
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar', $data);
+		$this->load->view('templates/navbar', $data);
+		$this->load->view('pretest/hasil', $data);
+		$this->load->view('templates/footer');
+	}
 }
