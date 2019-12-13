@@ -787,11 +787,12 @@
                       <label class="control-label">Masa Kerja*</label>
                         <div class="input-group date">
                         <input type="number" id="masa_kerja" name="masa_kerja" class="form-control" number="true" placeholder="Masa Kerja" required="true" />
-                        <div class="input-group-append">
+                          <div class="input-group-append">
                             <span class="input-group-text">
                               <span>Tahun</span>
                             </span>
                           </div>
+</div>
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Harapan training akan dilaksanakan*</label>
