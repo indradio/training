@@ -7,11 +7,14 @@
                                         Test akan segera dimulai, perhatikan hal-hal berikut sebelum memulai test:
                                         </h4>
                                         <P>
-                                        </br>1. Test akan dilakukan dalam 15 Menit.
-                                        </br>2. Selama test, waktu akan terus berjalan bahkan jika anda tinggalkan.
-                                        </br>3. Sebaiknya anda selesaikan dulu pekerjaan lain yang dapat mengganggu tes.
-                                        </br>4. Sebaiknya matikan ponsel anda selama tes berlangsung.
-                                        </br>5. Soal yang sudah dijawab tidak dapat diulang.
+                                        </br>1. Pastikan koneksi internet anda dalam kondisi baik / stabil.
+                                        </br>2. Test akan dilakukan dalam 15 Menit.
+                                        </br>3. Selama test, waktu akan terus berjalan bahkan jika anda tinggalkan.
+                                        </br>4. Sebaiknya anda selesaikan dulu pekerjaan lain yang dapat mengganggu tes.
+                                        </br>5. Sebaiknya matikan ponsel anda selama tes berlangsung.
+                                        </br>6. Soal yang sudah dijawab tidak dapat diulang.
+                                        </br>7. Tes ini bertujuan menentukan level awal anda, hindari menjawab pertanyaan dengan menebak.
+                                        </br>8. Jika anda tidak tahu jawaban suatu pertanyaan, tidak perlu ragu untuk pilih "E. Tidak tahu".
 									</div>
 		                            <div class="card-content">
                                         <div class="form-group text-right">
