@@ -117,7 +117,7 @@
                           </div>
                         </div>
                         <div class="col-md-4">
-                          <button type="submit" class="btn btn-lg btn-primary pull-right" id="submit">KIRM</button>
+                          <button type="submit" class="btn btn-lg btn-primary pull-right" id="submit">KIRIM</button>
                         </div>
                       </div>
                     </div>
