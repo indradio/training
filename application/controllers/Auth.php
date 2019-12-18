@@ -45,7 +45,7 @@ class Auth extends CI_Controller
               <span aria-hidden="true">&times;</span>
             </button>
           </div>');
-            // redirect('auth');
+            redirect('auth');
         }
     }
     

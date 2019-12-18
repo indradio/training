@@ -8,6 +8,8 @@
 	                        <div class="card">
 	                            <div class="card-content">
 	                                <div class="toolbar">
+									<a href="<?= base_url('pretest/kuesioner_export'); ?>" class="btn btn-success btn-round"> Download </a>
+									<h4 class="title"></h4>
 	                                    <!--Here you can write extra buttons/actions for the toolbar-->
 	                                </div>
                                     <div class="fresh-datatables">
@@ -55,10 +57,8 @@
 
 	        $('#datatables').DataTable({
 	            "pagingType": "full_numbers",
-				scrollX: true,
-				// dom: 'Bfrtip',
-				// buttons: 'csv',
 	            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+				scrollX: true,
 	            language: {
 	            search: "_INPUT_",
 		            searchPlaceholder: "Search records",

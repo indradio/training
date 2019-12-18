@@ -7,6 +7,7 @@ class Pretest extends CI_Controller {
     {
         parent::__construct();
 		is_logged_in();
+		$this->load->model('mes_model');
     }
 
 	public function index()
@@ -293,4 +294,26 @@ class Pretest extends CI_Controller {
 		$this->load->view('pretest/kuesioner_mes', $data);
 		$this->load->view('templates/footer');
 	}
+
+	public function kuesioner_export()
+    {
+		 $filename = 'KuesionerMES.csv'; 
+		 header("Content-Description: File Transfer"); 
+		 header("Content-Disposition: attachment; filename=$filename"); 
+		 header("Content-Type: application/csv; ");
+		 
+		 // get data 
+		 $usersData = $this->mes_model->getKuesioner();
+	  
+		 // file creation 
+		 $file = fopen('php://output', 'w');
+	   
+		 $header = array("Nama","Perusahaan","Aplikasi MES","Catatan"); 
+		 fputcsv($file, $header);
+		 foreach ($usersData as $key=>$line){ 
+		   fputcsv($file,$line); 
+		 }
+		 fclose($file); 
+		 exit; 
+    }
 }

@@ -10,6 +10,7 @@ class Mes_model extends CI_Model
 
     public function getKuesioner()
     {
+        $this->db->select('nama, perusahaan, aplikasi, catatan');
         $query = $this->db->get("kuesioner_mes");
         return $query->result_array();
     }
