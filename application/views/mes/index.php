@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" href="<?= base_url(); ?>assets/img//favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    WINTEQ - Kuesioner
+    WINTEQ Sharing Event - Kuesioner
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -63,6 +63,8 @@
         <div class="row">
           <div class="col-md-12 ml-auto mr-auto">
             <div class="card card-contact no-transition">
+              <h2 class="card-title text-center">WINTEQ Sharing Event</h2>
+              <h3 class="text-center">MES Implementation for SMART FACTORY</h3>
               <h3 class="card-title text-center">Kuesioner</h3>
               <div class="row">
                 <div class="col-md-4 ml-auto">
