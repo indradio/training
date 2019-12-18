@@ -280,4 +280,17 @@ class Pretest extends CI_Controller {
 		$this->load->view('pretest/hasil', $data);
 		$this->load->view('templates/footer');
 	}
+
+	public function kuesioner_mes()
+	{
+		date_default_timezone_set('asia/jakarta');
+		$this->load->model("mes_model");
+		$data['title'] = 'Kuesioner MES';
+		$data['kuesioner'] = $this->mes_model->getKuesioner();
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar', $data);
+		$this->load->view('templates/navbar', $data);
+		$this->load->view('pretest/kuesioner_mes', $data);
+		$this->load->view('templates/footer');
+	}
 }
