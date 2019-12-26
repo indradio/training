@@ -26,6 +26,7 @@ class Pretest extends CI_Controller {
 				$this->load->view('pretest/pretest', $data);
 				$this->load->view('templates/footer');
 			}else{
+				$data['pretest'] = $this->db->get_where('pretest', ['email' => $this->session->userdata('email')])->row_array();
 				$this->load->view('templates/header');
 				$this->load->view('templates/sidebar', $data);
 				$this->load->view('templates/navbar', $data);
@@ -53,7 +54,7 @@ class Pretest extends CI_Controller {
 		date_default_timezone_set('asia/jakarta');
 		$data = [
 			'waktu_mulai' => date('Y-m-d H:i:s'),
-			'waktu_selesai' => date('Y-m-d H:i:s', strtotime('+15minute', strtotime( date('Y-m-d H:i:s')))),
+			'waktu_selesai' => date('Y-m-d H:i:s', strtotime('+30minute', strtotime( date('Y-m-d H:i:s')))),
 			'nama' => $this->session->userdata('nama'),
 			'email' => $this->session->userdata('email'),
 			'status' => 1
@@ -73,7 +74,9 @@ class Pretest extends CI_Controller {
 		$this->load->view('templates/navbar', $data);
 		$this->load->view('pretest/soal', $data);
 		$this->load->view('templates/footer');
-    }public function addquest (){
+	}
+	
+	public function addquest (){
     	 $data = [
                     'no' => $this->input->post('no'),
                     'pertanyaan' =>$this->input->post('pertanyaan'),
@@ -97,19 +100,31 @@ class Pretest extends CI_Controller {
 	{
 		date_default_timezone_set('asia/jakarta');
 		$pretest = $this->db->get_where('pretest', ['email' => $this->session->userdata('email')])->row_array();
+		$soal = $this->db->get_where('soal', ['no' => $this->input->post('no')])->row_array();
 		if ($this->input->post('jawaban')==$this->input->post('options')){
-			$hasil = 1 ;
+			$hasil = $soal['bobot'];
 		}else{
 			$hasil = 0 ;
 		}
 		$total_hasil = $pretest['total_hasil'] + $hasil; 
+		$total_im = $total_hasil - $pretest['total_basic'];
+
+		if ($pretest['total_basic'] >= 26 AND $pretest['total_intermediate'] >= 26){
+			$level = 'ADVANCE';
+		}elseif ($pretest['total_basic'] >= 26){
+			$level = 'INTERMEDIATE';
+		}else{
+			$level = 'BASIC' ;
+		}
 		
 		if ($this->input->post('no')==1){
 
 			$this->db->set('soal_1', $this->input->post('id'));
 			$this->db->set('jawaban_1', $this->input->post('options'));
 			$this->db->set('hasil_1', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -119,7 +134,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_2', $this->input->post('id'));
 			$this->db->set('jawaban_2', $this->input->post('options'));
 			$this->db->set('hasil_2', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -129,7 +146,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_3', $this->input->post('id'));
 			$this->db->set('jawaban_3', $this->input->post('options'));
 			$this->db->set('hasil_3', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -139,7 +158,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_4', $this->input->post('id'));
 			$this->db->set('jawaban_4', $this->input->post('options'));
 			$this->db->set('hasil_4', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -149,7 +170,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_5', $this->input->post('id'));
 			$this->db->set('jawaban_5', $this->input->post('options'));
 			$this->db->set('hasil_5', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -159,7 +182,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_6', $this->input->post('id'));
 			$this->db->set('jawaban_6', $this->input->post('options'));
 			$this->db->set('hasil_6', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -169,7 +194,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_7', $this->input->post('id'));
 			$this->db->set('jawaban_7', $this->input->post('options'));
 			$this->db->set('hasil_7', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -179,7 +206,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_8', $this->input->post('id'));
 			$this->db->set('jawaban_8', $this->input->post('options'));
 			$this->db->set('hasil_8', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -189,7 +218,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_9', $this->input->post('id'));
 			$this->db->set('jawaban_9', $this->input->post('options'));
 			$this->db->set('hasil_9', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -199,7 +230,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_10', $this->input->post('id'));
 			$this->db->set('jawaban_10', $this->input->post('options'));
 			$this->db->set('hasil_10', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -209,7 +242,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_11', $this->input->post('id'));
 			$this->db->set('jawaban_11', $this->input->post('options'));
 			$this->db->set('hasil_11', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -219,17 +254,21 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_12', $this->input->post('id'));
 			$this->db->set('jawaban_12', $this->input->post('options'));
 			$this->db->set('hasil_12', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', 'BASIC');
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
 			redirect('pretest');
 		}elseif ($this->input->post('no')==13){
-
+			
 			$this->db->set('soal_13', $this->input->post('id'));
 			$this->db->set('jawaban_13', $this->input->post('options'));
 			$this->db->set('hasil_13', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -239,7 +278,9 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_14', $this->input->post('id'));
 			$this->db->set('jawaban_14', $this->input->post('options'));
 			$this->db->set('hasil_14', $hasil);
+			$this->db->set('total_basic', $total_hasil);
 			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -249,9 +290,192 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_15', $this->input->post('id'));
 			$this->db->set('jawaban_15', $this->input->post('options'));
 			$this->db->set('hasil_15', $hasil);
+			$this->db->set('total_basic', $total_hasil);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==16){
+
+			$this->db->set('soal_16', $this->input->post('id'));
+			$this->db->set('jawaban_16', $this->input->post('options'));
+			$this->db->set('hasil_16', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==17){
+
+			$this->db->set('soal_17', $this->input->post('id'));
+			$this->db->set('jawaban_17', $this->input->post('options'));
+			$this->db->set('hasil_17', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==18){
+
+			$this->db->set('soal_18', $this->input->post('id'));
+			$this->db->set('jawaban_18', $this->input->post('options'));
+			$this->db->set('hasil_18', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==19){
+
+			$this->db->set('soal_19', $this->input->post('id'));
+			$this->db->set('jawaban_19', $this->input->post('options'));
+			$this->db->set('hasil_19', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==20){
+
+			$this->db->set('soal_20', $this->input->post('id'));
+			$this->db->set('jawaban_20', $this->input->post('options'));
+			$this->db->set('hasil_20', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==21){
+
+			$this->db->set('soal_21', $this->input->post('id'));
+			$this->db->set('jawaban_21', $this->input->post('options'));
+			$this->db->set('hasil_21', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==22){
+
+			$this->db->set('soal_22', $this->input->post('id'));
+			$this->db->set('jawaban_22', $this->input->post('options'));
+			$this->db->set('hasil_22', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==23){
+
+			$this->db->set('soal_23', $this->input->post('id'));
+			$this->db->set('jawaban_23', $this->input->post('options'));
+			$this->db->set('hasil_23', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==24){
+
+			$this->db->set('soal_24', $this->input->post('id'));
+			$this->db->set('jawaban_24', $this->input->post('options'));
+			$this->db->set('hasil_24', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==25){
+
+			$this->db->set('soal_25', $this->input->post('id'));
+			$this->db->set('jawaban_25', $this->input->post('options'));
+			$this->db->set('hasil_25', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==26){
+
+			$this->db->set('soal_26', $this->input->post('id'));
+			$this->db->set('jawaban_26', $this->input->post('options'));
+			$this->db->set('hasil_26', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==27){
+
+			$this->db->set('soal_27', $this->input->post('id'));
+			$this->db->set('jawaban_27', $this->input->post('options'));
+			$this->db->set('hasil_27', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==28){
+
+			$this->db->set('soal_28', $this->input->post('id'));
+			$this->db->set('jawaban_28', $this->input->post('options'));
+			$this->db->set('hasil_28', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==29){
+
+			$this->db->set('soal_29', $this->input->post('id'));
+			$this->db->set('jawaban_29', $this->input->post('options'));
+			$this->db->set('hasil_29', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('pretest');
+			
+			redirect('pretest');
+		}elseif ($this->input->post('no')==30){
+
+			$this->db->set('soal_30', $this->input->post('id'));
+			$this->db->set('jawaban_30', $this->input->post('options'));
+			$this->db->set('hasil_30', $hasil);
+			$this->db->set('total_intermediate', $total_im);
+			$this->db->set('total_hasil', $total_hasil);
+			$this->db->set('level', $level);
 			$this->db->set('waktu_selesai', date('Y-m-d H:i:s'));
 			$this->db->set('status', 9);
-			$this->db->set('total_hasil', $total_hasil);
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
@@ -262,6 +486,15 @@ class Pretest extends CI_Controller {
 	
 	public function waktu_habis()
 	{
+		$pretest = $this->db->get_where('pretest', ['email' => $this->session->userdata('email')])->row_array();
+		if ($pretest['total_basic'] >= 26 AND $pretest['total_intermediate'] >= 26){
+			$level = 'ADVANCE';
+		}elseif ($pretest['total_basic'] >= 26){
+			$level = 'INTERMEDIATE';
+		}else{
+			$level = 'BASIC' ;
+		}
+			$this->db->set('level', $level);
 			$this->db->set('status', 9);
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');

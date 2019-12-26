@@ -4,9 +4,10 @@
 							    <form method="post#" action="<?= base_url('pretest/mulai'); ?>">
 		                            <div class="card-header">
 									    <h4 class="card-title">
-											Terima Kasih, anda telah menyelesaikan pretest.
+											Selamat, Level anda <b><?= $pretest['level']; ?></b>.
 										</h4>
 										<P>
+                                        </br>Terima Kasih anda telah menyelesaikan pretest.
                                         </br>Kami akan segera menghubungi anda.
 									</div>
 		                            <div class="card-content">

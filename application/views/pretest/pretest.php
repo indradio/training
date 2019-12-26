@@ -19,33 +19,33 @@
                                         </div>
                                         <label>Pilihan Jawaban</label>
                                             <p>
-                                            <?php if ($soal['gambar_a']){ ?>
+                                                <span id="pertanyaan">A. <?= $soal['pilihan_a']; ?></span>
+                                                <?php if ($soal['gambar_a']){ ?>
+                                                        <div class="photo">
+                                                            <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_a']; ?>" />
+                                                        </div>
+                                                    <?php } ?>
+                                            <p>
+                                                <span id="pertanyaan">B. <?= $soal['pilihan_b']; ?></span>
+                                                <?php if ($soal['gambar_b']){ ?>
                                                     <div class="photo">
-                                                        <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_a']; ?>" />
+                                                        <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_b']; ?>" />
                                                     </div>
-                                                <?php } ?>
-                                            <span id="pertanyaan">A. <?= $soal['pilihan_a']; ?></span>
+                                                    <?php } ?>
                                             <p>
-                                            <?php if ($soal['gambar_b']){ ?>
-                                                <div class="photo">
-                                                    <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_b']; ?>" />
-                                                </div>
-                                                <?php } ?>
-                                            <span id="pertanyaan">B. <?= $soal['pilihan_b']; ?></span>
+                                                <span id="pertanyaan">C. <?= $soal['pilihan_c']; ?></span>
+                                                <?php if ($soal['gambar_c']){ ?>
+                                                    <div class="photo">
+                                                        <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_c']; ?>" />
+                                                    </div>
+                                                    <?php } ?>
                                             <p>
-                                            <?php if ($soal['gambar_c']){ ?>
-                                                <div class="photo">
-                                                    <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_c']; ?>" />
-                                                </div>
-                                                <?php } ?>
-                                            <span id="pertanyaan">C. <?= $soal['pilihan_c']; ?></span>
-                                            <p>
-                                            <?php if ($soal['gambar_d']){ ?>
-                                                <div class="photo">
-                                                    <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_d']; ?>" />
-                                                </div>
-                                                <?php } ?>
-                                            <span id="pertanyaan">D. <?= $soal['pilihan_d']; ?></span>
+                                                <span id="pertanyaan">D. <?= $soal['pilihan_d']; ?></span>
+                                                <?php if ($soal['gambar_d']){ ?>
+                                                    <div class="photo">
+                                                        <img src="<?= base_url(); ?>assets/img/soal/<?= $soal['gambar_d']; ?>" />
+                                                    </div>
+                                                    <?php } ?>
                                             <p>
                                             <?php if ($soal['gambar_d']){ ?>
                                             <p>
@@ -210,12 +210,117 @@
                                                     } ?>
                                                         <a href="#">14</a>
                                                     </li>
-                                                    <?php if ($soal['no']==15){
+                                                    <?php if ($soal['no']>=15){
                                                         echo '<li class="active">';
                                                     }else{
                                                         echo '<li>';
                                                     } ?>
                                                         <a href="#">15</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=16){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">16</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=17){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">17</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=18){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">18</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=19){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">19</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=20){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">20</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=21){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">21</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=22){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">22</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=23){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">23</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=24){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">24</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=25){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">25</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=26){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">26</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=27){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">27</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=28){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">28</a>
+                                                    </li>
+                                                    <?php if ($soal['no']>=29){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">29</a>
+                                                    </li>
+                                                    <?php if ($soal['no']==30){
+                                                        echo '<li class="active">';
+                                                    }else{
+                                                        echo '<li>';
+                                                    } ?>
+                                                        <a href="#">30</a>
                                                     </li>
                                                 </ul>
                                             </div>

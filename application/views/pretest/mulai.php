@@ -8,7 +8,7 @@
                                         </h4>
                                         <P>
                                         </br>1. Pastikan koneksi internet anda dalam kondisi baik / stabil.
-                                        </br>2. Test akan dilakukan dalam 15 Menit.
+                                        </br>2. Test akan dilakukan dalam 30 Menit.
                                         </br>3. Selama test, waktu akan terus berjalan bahkan jika anda tinggalkan.
                                         </br>4. Sebaiknya anda selesaikan dulu pekerjaan lain yang dapat mengganggu tes.
                                         </br>5. Sebaiknya matikan ponsel anda selama tes berlangsung.

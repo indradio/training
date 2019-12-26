@@ -26,7 +26,67 @@ class Pretest_model extends CI_Model
                                                         if($t['soal_13']){
                                                             if($t['soal_14']){
                                                                 if($t['soal_15']){
-                                                                    $no = 0 ;  
+                                                                    if($t['soal_16']){
+                                                                        if($t['soal_17']){
+                                                                            if($t['soal_18']){
+                                                                                if($t['soal_19']){
+                                                                                    if($t['soal_20']){
+                                                                                        if($t['soal_21']){
+                                                                                            if($t['soal_22']){
+                                                                                                if($t['soal_23']){
+                                                                                                    if($t['soal_24']){
+                                                                                                        if($t['soal_25']){
+                                                                                                            if($t['soal_26']){
+                                                                                                                if($t['soal_27']){
+                                                                                                                    if($t['soal_28']){
+                                                                                                                        if($t['soal_29']){
+                                                                                                                            if($t['soal_30']){
+                                                                                                                                $no = 0 ;  
+                                                                                                                            }else{
+                                                                                                                                $no = 30 ;
+                                                                                                                            }
+                                                                                                                        }else{
+                                                                                                                            $no = 29 ;
+                                                                                                                        }
+                                                                                                                    }else{
+                                                                                                                        $no = 28 ;
+                                                                                                                    }
+                                                                                                                }else{
+                                                                                                                    $no = 27 ;
+                                                                                                                }
+                                                                                                            }else{
+                                                                                                                $no = 26 ;
+                                                                                                            }
+                                                                                                        }else{
+                                                                                                            $no = 25 ;
+                                                                                                        }
+                                                                                                    }else{
+                                                                                                        $no = 24 ;
+                                                                                                    }
+                                                                                                }else{
+                                                                                                    $no = 23 ;
+                                                                                                }
+                                                                                            }else{
+                                                                                                $no = 22 ;
+                                                                                            }
+                                                                                        }else{
+                                                                                            $no = 21 ;
+                                                                                        }
+                                                                                    }else{
+                                                                                        $no = 20 ;
+                                                                                    }
+                                                                                }else{
+                                                                                    $no = 19 ;
+                                                                                }
+                                                                            }else{
+                                                                                $no = 18 ;
+                                                                            }
+                                                                        }else{
+                                                                            $no = 17 ;
+                                                                        }
+                                                                    }else{
+                                                                        $no = 16 ;
+                                                                    }
                                                                 }else{
                                                                     $no = 15 ;
                                                                 }
