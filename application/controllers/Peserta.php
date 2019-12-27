@@ -8,7 +8,7 @@ class Peserta extends CI_Controller {
 		date_default_timezone_set('asia/jakarta');
 		$this->load->model("peserta_model");
 		$data['title'] = 'Peserta';
-		$data['peserta'] = $this->peserta_model->get_peserta();
+		$data['peserta'] = $this->peserta_model->get_allpeserta();
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/navbar', $data);

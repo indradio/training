@@ -8,9 +8,10 @@ class Peserta_model extends CI_Model
         $this->load->database();
     }
 
-    public function get_peserta()
+    public function get_allpeserta()
     {
+        $this->db->order_by('id', "DESC");
         $query = $this->db->get("peserta");
-        return $query->row_array();
+        return $query->result_array();
     }
 }

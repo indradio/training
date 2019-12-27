@@ -14,37 +14,43 @@
 										<table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
 										<thead>
 											<tr>
-												<th>Name</th>
-												<th>Position</th>
-												<th>Office</th>
-												<th>Age</th>
-												<th>Start date</th>
+												<th>No</th>
+												<th>Nama</th>
+												<th>Nilai Basic</th>
+												<th>Nilai Intermediate</th>
+												<th>Total</th>
+												<th>Level</th>
 												<th class="disabled-sorting">Actions</th>
 											</tr>
 										</thead>
 										<tfoot>
 											<tr>
-												<th>Name</th>
-												<th>Position</th>
-												<th>Office</th>
-												<th>Age</th>
-												<th>Start date</th>
+												<th>No</th>
+												<th>Nama</th>
+												<th>Nilai Basic</th>
+												<th>Nilai Intermediate</th>
+												<th>Total</th>
+												<th>Level</th>
 												<th>Actions</th>
 											</tr>
 										</tfoot>
 										<tbody>
+										<?php 
+											$no = 1;foreach ($hasil as $h) : ?>
 											<tr>
-												<td>Tiger Nixon</td>
-												<td>System Architect</td>
-												<td>Edinburgh</td>
-												<td>61</td>
-												<td>2011/04/25</td>
+												<td><?= $no; ?></td>
+												<td><?= $h['nama']; ?></td>
+												<td><?= $h['total_basic']; ?></td>
+												<td><?= $h['total_intermediate']; ?></td>
+												<td><?= $h['total_hasil']; ?></td>
+												<td><?= $h['level']; ?></td>
 												<td>
 													<a href="#" class="btn btn-simple btn-info btn-icon like"><i class="ti-heart"></i></a>
-													<a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="ti-pencil-alt"></i></a>
-													<input type="checkbox" class="switch-plain" checked>
 												</td>
 											</tr>
+											<?php 
+										  $no++;
+										  endforeach; ?>
 										   </tbody>
 									    </table>
 									</div>

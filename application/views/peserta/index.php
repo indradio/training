@@ -14,37 +14,89 @@
 										<table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
 										<thead>
 											<tr>
-												<th>Name</th>
-												<th>Position</th>
-												<th>Office</th>
-												<th>Age</th>
-												<th>Start date</th>
+												<th>No</th>
+												<th>Nama</th>
+												<th>Email</th>
+												<th>HP</th>
+												<th>gender</th>
+												<th>Tanggal Lahir</th>
+												<th>Pendidikan</th>
+												<th>Jurusan</th>
+												<th>Perusahaan</th>
+												<th>Lokasi/Plant</th>
+												<th>Jabatan</th>
+												<th>Masa Kerja</th>
+												<th>Rencana Training</th>
+												<th>Level</th>
+												<th>Merek</th>
+												<th>Tipe</th>
+												<th>Harapan</th>
+												<th>Catatan Makanan</th>
+												<th>Role</th>
 												<th class="disabled-sorting">Actions</th>
 											</tr>
 										</thead>
 										<tfoot>
 											<tr>
-												<th>Name</th>
-												<th>Position</th>
-												<th>Office</th>
-												<th>Age</th>
-												<th>Start date</th>
+												<th>No</th>
+												<th>Nama</th>
+												<th>Email</th>
+												<th>HP</th>
+												<th>gender</th>
+												<th>Tanggal Lahir</th>
+												<th>Pendidikan</th>
+												<th>Jurusan</th>
+												<th>Perusahaan</th>
+												<th>Lokasi</th>
+												<th>Jabatan</th>
+												<th>Masa Kerja</th>
+												<th>Rencana Training</th>
+												<th>Level</th>
+												<th>Merek</th>
+												<th>Tipe</th>
+												<th>Harapan</th>
+												<th>Catatan Makanan</th>
+												<th>Role</th>
 												<th>Actions</th>
 											</tr>
 										</tfoot>
 										<tbody>
+										<?php 
+											$no = 1;foreach ($peserta as $p) : ?>
 											<tr>
-												<td>Tiger Nixon</td>
-												<td>System Architect</td>
-												<td>Edinburgh</td>
-												<td>61</td>
-												<td>2011/04/25</td>
+												<td><?= $no; ?></td>
+												<td><?= $p['nama']; ?></td>
+												<td><?= $p['email']; ?></td>
+												<td><?= $p['phone']; ?></td>
+												<td><?= $p['gender']; ?></td>
+												<td><?= $p['tgl_lahir']; ?></td>
+												<td><?= $p['pendidikan']; ?></td>
+												<td><?= $p['jurusan']; ?></td>
+												<td><?= $p['perusahaan']; ?></td>
+												<td><?= $p['lokasi']; ?></td>
+												<td><?= $p['jabatan']; ?></td>
+												<td><?= $p['masa_kerja']; ?> Tahun</td>
+												<td><?= $p['tgl_training']; ?></td>
+												<td><?= $p['program']; ?></td>
+												<td><?= $p['merek']; ?></td>
+												<td><?= $p['tipe']; ?></td>
+												<td><?= $p['harapan']; ?></td>
+												<td><?= $p['makanan']; ?></td>
+												<td><?php if ($p['role_id']==1)
+												{
+													echo 'Administrator';
+												}elseif ($p['role_id']==2){
+													echo 'Trainer';
+												}else{
+													echo 'Peserta';
+												} ?></td>
 												<td>
 													<a href="#" class="btn btn-simple btn-info btn-icon like"><i class="ti-heart"></i></a>
-													<a href="#" class="btn btn-simple btn-warning btn-icon edit"><i class="ti-pencil-alt"></i></a>
-													<input type="checkbox" class="switch-plain" checked>
 												</td>
 											</tr>
+											<?php 
+										  $no++;
+										  endforeach; ?>
 										   </tbody>
 									    </table>
 									</div>

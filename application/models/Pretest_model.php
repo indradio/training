@@ -144,4 +144,11 @@ class Pretest_model extends CI_Model
         $query = $this->db->get("pretest");
         return $query->row_array();
     }
+
+    public function get_allpretest()
+    {   
+        $this->db->order_by('id', "DESC");
+        $query = $this->db->get("pretest");
+        return $query->result_array();
+    }
 }

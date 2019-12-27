@@ -57,6 +57,9 @@ class Pretest extends CI_Controller {
 			'waktu_selesai' => date('Y-m-d H:i:s', strtotime('+30minute', strtotime( date('Y-m-d H:i:s')))),
 			'nama' => $this->session->userdata('nama'),
 			'email' => $this->session->userdata('email'),
+			'total_basic' => 0,
+			'total_intermediate' => 0,
+			'total_hasil' => 0,
 			'status' => 1
 		];
 		$this->db->insert('pretest', $data);
@@ -296,7 +299,13 @@ class Pretest extends CI_Controller {
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
-			redirect('pretest');
+			if ($total_hasil>=26)
+			{
+				redirect('pretest');
+			}else{
+				redirect('pretest/waktu_habis');
+			}
+
 		}elseif ($this->input->post('no')==16){
 
 			$this->db->set('soal_16', $this->input->post('id'));
@@ -507,7 +516,7 @@ class Pretest extends CI_Controller {
 		date_default_timezone_set('asia/jakarta');
 		$this->load->model("pretest_model");
 		$data['title'] = 'Hasil Pretest';
-		// $data['hasil'] = $this->pretest_model->get_hasil();
+		$data['hasil'] = $this->pretest_model->get_allpretest();
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/navbar', $data);
