@@ -16,6 +16,27 @@ class Beranda extends CI_Controller {
 		$this->load->helper('string');
 		$password = random_string('alnum',8);
 
+		if ($this->input->post('pendidikan')!='Lainnya')
+		{
+			$pendidikan = $this->input->post('pendidikan');
+		}else{
+			$pendidikan = $this->input->post('pendidikan_lainnya');
+		}
+
+		if ($this->input->post('jabatan')!='Lainnya')
+		{
+			$jabatan = $this->input->post('jabatan');
+		}else{
+			$jabatan = $this->input->post('jabatan_lainnya');
+		}
+
+		if ($this->input->post('merek')!='Lainnya')
+		{
+			$merek = $this->input->post('merek');
+		}else{
+			$merek = $this->input->post('merek_lainnya');
+		}
+
 		$data = [
 			'tanggal' => date('Y-m-d H:i:s'),
 			'nama' => $this->input->post('nama'),
@@ -24,15 +45,15 @@ class Beranda extends CI_Controller {
 			'email' => $this->input->post('email'),
 			'phone' => '0'.$this->input->post('phone'),
 			'tgl_lahir' => $tanggal_lahir,
-			'pendidikan' => $this->input->post('pendidikan'),
+			'pendidikan' => $pendidikan,
 			'jurusan' => $this->input->post('jurusan'),
 			'perusahaan' => $this->input->post('perusahaan'),
 			'lokasi' => $this->input->post('lokasi'),
-			'jabatan' => $this->input->post('jabatan'),
+			'jabatan' => $jabatan,
 			'masa_kerja' => $this->input->post('masa_kerja'),
 			'tgl_training' => $tanggal_training,
 			'program' => $this->input->post('program'),
-			'merek' => $this->input->post('merek'),
+			'merek' => $merek,
 			'tipe' => $this->input->post('tipe'),
 			'harapan' => $this->input->post('harapan'),
 			'password' => password_hash($password, PASSWORD_DEFAULT),

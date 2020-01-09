@@ -97,9 +97,9 @@
     <div class="space-top"></div>
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
       <div class="space-top"></div>
-        <div class="container">
+        <!-- <div class="container">
           <a class="navbar-brand mb-0 mt-4" href="#">WINTEQ Technical Training Programs</a>
-        </div>
+        </div> -->
       </nav>
       <div class="page-carousel">
         <div class="filter"></div>
@@ -144,7 +144,7 @@
                   <div class="container">
                     <div class="row">
                       <div class="col-md-7 ml-auto text-right">
-                        <h2 class="title">Training PLC</h2>
+                        <h2 class="title"><b>Training PLC</b></h2>
                         <h5>Tingkatkan keahlian engineer untuk meningkatkan produktivitas produksi dengan teknologi berkompetensi industri 4.0.</h5>
                         <br />
                         <div class="buttons">
@@ -168,7 +168,7 @@
                   <div class="container">
                     <div class="row">
                       <div class="col-md-10 ml-auto mr-auto text-center">
-                        <h2 class="title">Pengalaman Belajar yang Menyenangkan</h2>
+                        <h2 class="title"><b>Pengalaman Belajar yang Menyenangkan</b></h2>
                         <h5>Suasana belajar yang menyenangkan, berfokus pada aplikasi dan kondisi proses produksi anda.</h5>
                         <br />
                         <h6></h6>
@@ -413,13 +413,16 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 ml-auto mr-auto">
+          <div class="col-md-4 ml-auto mr-auto">
             <div class="card card-pricing">
               <div class="card-body">
+              </br>
                 <h4 class="card-category">BASIC</h4>
+                </br>
                 <div class="card-icon">
                   <i class="nc-icon nc-hat-3"></i>
                 </div>
+                </br>
                 <p class="card-description">
                 Belajar PLC dari dasar, komunikasi antara software dan PLC.
                 </p>
@@ -438,13 +441,16 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 mr-auto">
+          <div class="col-md-4 mr-auto">
             <div class="card card-pricing">
               <div class="card-body">
+              </br>
                 <h4 class="card-category">INTERMEDIATE</h4>
+                </br>
                 <div class="card-icon">
                   <i class="nc-icon nc-tap-01"></i>
                 </div>
+                </br>
                 <p class="card-description">
                 Instruksi-instruksi PLC lanjutan menggunakan Human Machine Interface.
                 </p>
@@ -463,48 +469,28 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 mr-auto">
+          <div class="col-md-4 mr-auto">
             <div class="card card-pricing" data-background="color" data-color="blue">
               <div class="card-body">
-                <h3 class="card-category"><b>ADVANCE</b></h3>
+                <h3 class="card-category"><b>ADVANCE & NETWORKING</b></h3>
                 <div class="card-icon">
                   <i class="nc-icon nc-trophy"></i>
                 </div>
+                </br>
                 <p class="card-description">
                 Membuat program PLC dari awal untuk sebuah projek.
                 </p>
                 <ul>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of PLC with special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Special I/O: Analog Input, Analog Output, Networking</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration using special I/O</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & Memory Allocation using special I/O</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Advance Programming for special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Ethernet Communication & Networking System</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing and Memory Allocation of Networking Module</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
                 </ul>
                 <div class="card-footer">
                   <a href="#" class="btn btn-neutral btn-round card-link" data-toggle="modal" data-target="#advanceModal">Selengkapnya</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 mr-auto">
-            <div class="card card-pricing">
-              <div class="card-body">
-                <h5 class="card-category">ADVANCE NETWORKING</h5>
-                <div class="card-icon">
-                  <i class="nc-icon nc-spaceship"></i>
-                </div>
-                <p class="card-description">
-                Menghubungkan PLC dengan perangkat kontrol lainnya.
-                </p>
-                <ul>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Communication & Networking System</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Compo Net System, CC-Link & Ethernet System</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration using Networking</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
-                </ul>
-                <div class="card-footer">
-                  <a href="#" class="btn btn-info btn-round card-link" data-toggle="modal" data-target="#networkModal">Selengkapnya</a>
                 </div>
               </div>
             </div>
@@ -751,7 +737,7 @@
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Pendidikan Akademik*</label>
-                        <select class="selectpicker" id="pendidikan" name="pendidikan" data-style="btn-primary select-with-transition" title="Pilih Pendidikan" required="true">
+                        <select class="selectpicker" id="pendidikan" name="pendidikan" data-style="btn-primary select-with-transition" title="Pilih Pendidikan" onchange="pendidikanSelect(this);" required="true">
                           <option value="SMA/SMK">SMA/SMK/SEDERAJAT</option>
                           <option value="D3">D3</option>
                           <option value="S1">S1</option>
@@ -759,6 +745,9 @@
                           <option value="S3">S3</option>
                           <option value="Lainnya">Lainnya</option>
                         </select>
+                      </div>
+                      <div class="form-group label-floating" id="p_lain" style="display:none;">
+                        <input type="text" id="pendidikan_lainnya" name="pendidikan_lainnya" class="form-control" placeholder="Tuliskan Pendidikan Anda*" />
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Jurusan Akademik*</label>
@@ -774,7 +763,7 @@
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Jabatan*</label>
-                        <select class="selectpicker" id="jabatan" name="jabatan" data-style="btn-primary select-with-transition" title="Pilih Jabatan" required="true">
+                        <select class="selectpicker" id="jabatan" name="jabatan" data-style="btn-primary select-with-transition" title="Pilih Jabatan" onchange="jabatanSelect(this);" required="true">
                           <option value="Manager">Manager</option>
                           <option value="Supervisor">Supervisor</option>
                           <option value="Leader">Leader</option>
@@ -782,6 +771,9 @@
                           <option value="Operator">Operator</option>
                           <option value="Lainnya">Lainnya</option>
                         </select>
+                      </div>
+                      <div class="form-group label-floating" id="j_lain" style="display:none;">
+                        <input type="text" id="jabatan_lainnya" name="jabatan_lainnya" class="form-control" placeholder="Tuliskan Jabatan Anda*" />
                       </div>
                       <div class="form-group label-floating">
                       <label class="control-label">Masa Kerja*</label>
@@ -792,7 +784,7 @@
                               <span>Tahun</span>
                             </span>
                           </div>
-</div>
+                        </div>
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Harapan training akan dilaksanakan*</label>
@@ -808,19 +800,22 @@
                       <div class="form-group label-floating">
                         <label class="control-label">Harapan training yang diikuti* <small>(akan dikonfirmasi sesuai hasil pretest)</small></label>
                         <select class="selectpicker" id="program" name="program" data-style="btn-primary select-with-transition" title="Pilih Training" required="true">
-                          <option value="Basic">BASIC PLC</option>
-                          <option value="Intermediate">INTERMEDIATE PLC</option>
-                          <option value="Advance">ADVANCE PLC</option>
-                          <option value="Networking">ADVANCE PLC NETWORKING</option>
+                          <option value="Basic">BASIC</option>
+                          <option value="Intermediate">INTERMEDIATE</option>
+                          <option value="Advance & Networking">ADVANCE & NETWORKING</option>
                         </select>
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Merek PLC*</label>
-                        <select class="selectpicker" id="merek" name="merek" data-style="btn-primary select-with-transition" title="Pilih Merek PLC" required="true">
+                        <select class="selectpicker" id="merek" name="merek" data-style="btn-primary select-with-transition" title="Pilih Merek PLC" onchange="merekSelect(this);" required="true">
                           <option value="Mitsubishi Electric">MITSUBISHI ELECTRIC</option>
                           <option value="Omron">OMRON</option>
                           <option value="Siemens">SIEMENS</option>
+                          <option value="Lainnya">LAINNYA</option>
                         </select>
+                      </div>
+                      <div class="form-group label-floating" id="m_lain" style="display:none;">
+                        <input type="text" id="merek_lainnya" name="merek_lainnya" class="form-control" placeholder="Tuliskan Merek PLC yg anda gunakan*" />
                       </div>
                       <div class="form-group label-floating">
                         <label class="control-label">Tipe PLC*</label>
@@ -916,25 +911,25 @@
               <thead>
                 <tr>
                   <th class="text-center">#</th>
-                  <th>Materi</th>
+                  <th><b>Materi</b></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="text-center">1</td>
-                  <td>Introduction to PLC Family</td>
+                  <td>Introduction to Modular PLC</td>
                 </tr>
                 <tr>
                   <td class="text-center">2</td>
-                  <td>PLC Composition: Hardware, Software and Wiring</td>
+                  <td>Komposisi PLC: Hardware, Software dan Wiring</td>
                 </tr>
                 <tr>
                   <td class="text-center">3</td>
-                  <td>System Configuration of PLC</td>
+                  <td>Sistem Konfigurasi PLC</td>
                 </tr>
                 <tr>
                   <td class="text-center">4</td>
-                  <td>Function, Characteristic & Feature of PLC</td>
+                  <td>Fungsi, Karakteristik & Fitur PLC</td>
                 </tr>
                 <tr>
                   <td class="text-center">5</td>
@@ -942,31 +937,45 @@
                 </tr>
                 <tr>
                   <td class="text-center">6</td>
-                  <td>Basic Instruction: AND, OR, NOT, NAND & NOR</td>
+                  <td>Ladder Diagram: Contact, Output, AND, OR, NOT, NAND & NOR</td>
                 </tr>
                 <tr>
                   <td class="text-center">7</td>
-                  <td>Ladder Diagram</td>
+                  <td>Basic Programming: Timer, Counter, Set/Reset, Keep & DIFU/DIFD (Flank Signal)</td>
                 </tr>
                 <tr>
                   <td class="text-center">8</td>
-                  <td>Programming tools (Practice)</td>
-                </tr>
-                <tr>
-                  <td class="text-center">9</td>
-                  <td>Basic Programming: Timer, Counter, Set/Reset, Keep & Ditu/Difd</td>
-                </tr>
-                <tr>
-                  <td class="text-center">10</td>
-                  <td>Application Example (Connect to Sensor, Push button. etc)</td>
-                </tr>
-                <tr>
-                  <td class="text-center">11</td>
-                  <td>Electro Pneumatic</td>
+                  <td>Contoh Aplikasi & Studi Kasus (Koneksi ke Sensor, Push Button. etc)</td>
                 </tr>
                 <tr>
                 <td></td>
                 <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Tidak Mempelajari</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>Human Machine Interface (HMI)</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td>Pengolahan Data</td>
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td>Networking </td>
                 </tr>
               </tbody>
             </table>
@@ -993,7 +1002,7 @@
               <thead>
                 <tr>
                   <th class="text-center">#</th>
-                  <th>Materi</th>
+                  <th><b>Materi</b></th>
                 </tr>
               </thead>
               <tbody>
@@ -1007,43 +1016,65 @@
                 </tr>
                 <tr>
                   <td class="text-center">3</td>
-                  <td>System Configuration of PLC (High Speed Input)</td>
-                </tr>
-                <tr>
-                  <td class="text-center">4</td>
                   <td>Addressing & I/O Allocation</td>
                 </tr>
                 <tr>
+                  <td class="text-center">4</td>
+                  <td>Intermediate Programming and Operation of Programming tools (Notation, Data Movement, Data Comparison, Arithmetic Operation, Data Conversion)</td>
+                </tr>
+                <tr>
                   <td class="text-center">5</td>
-                  <td>Intermediate Programming and Operation of Programming tools</td>
+                  <td>Introduction to Human Machine Interface (HMI)/Touchscreen</td>
                 </tr>
                 <tr>
                   <td class="text-center">6</td>
-                  <td>Human Machine Interface (HMI)/Touchscreen</td>
-                </tr>
-                <tr>
-                  <td class="text-center">7</td>
                   <td>Function, Characteristic & Feature of HMI</td>
                 </tr>
                 <tr>
-                  <td class="text-center">8</td>
-                  <td>Setup & Integration to PLC</td>
+                  <td class="text-center">7</td>
+                  <td>Setup & Integration HMI to PLC</td>
                 </tr>
                 <tr>
-                  <td class="text-center">9</td>
+                  <td class="text-center">8</td>
                   <td>Basic screen designing using HMI programming tools</td>
                 </tr>
                 <tr>
+                  <td class="text-center">9</td>
+                  <td>HMI Screen Upload/Download</td>
+                </tr>
+                <tr>
                   <td class="text-center">10</td>
-                  <td>Screen Upload/Download</td>
-                </tr>
-                <tr>
-                  <td class="text-center">11</td>
-                  <td>Application Examples</td>
+                  <td>Contoh Aplikasi & Studi Kasus</td>
                 </tr>
                 <tr>
                 <td></td>
                 <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Tidak Mempelajari</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>Materi yang ada di silabus basic</td>
+                </tr>
+                <tr>
+                  <td class="text-center">2</td>
+                  <td>Basic wiring and connection</td>
+                </tr>
+                <tr>
+                  <td class="text-center">3</td>
+                  <td>Networking </td>
                 </tr>
               </tbody>
             </table>
@@ -1070,7 +1101,7 @@
               <thead>
                 <tr>
                   <th class="text-center">#</th>
-                  <th>Materi</th>
+                  <th><b>Materi</b></th>
                 </tr>
               </thead>
               <tbody>
@@ -1080,30 +1111,61 @@
                 </tr>
                 <tr>
                   <td class="text-center">2</td>
-                  <td>System Configuration of PLC using special I/O</td>
+                  <td>Special I/O: Analog Input, Analog Output, Networking</td>
                 </tr>
                 <tr>
                   <td class="text-center">3</td>
-                  <td>Function, Characteristic & Feature of special I/O</td>
+                  <td>System Configuration of PLC using special I/O </td>
                 </tr>
                 <tr>
                   <td class="text-center">4</td>
-                  <td>Addressing & I/O Allocation of special I/O</td>
+                  <td>Function, Characteristic & Feature of special I/O</td>
                 </tr>
                 <tr>
                   <td class="text-center">5</td>
-                  <td>Basic Programming realated to special I/O</td>
+                  <td>Addressing & I/O Allocation of special I/O</td>
                 </tr>
                 <tr>
                   <td class="text-center">6</td>
-                  <td>Servo Motor</td>
+                  <td>Basic Programming realated to special I/O</td>
                 </tr>
+                <tr>
                   <td class="text-center">7</td>
-                  <td>Application Example</td>
+                  <td>Ethernet Communication & Networking System</td>
+                </tr>
+                <tr>
+                  <td class="text-center">8</td>
+                  <td>Addressing and Memory Allocation of Networking Module</td>
+                </tr>
+                <tr>
+                  <td class="text-center">9</td>
+                  <td>DeviceNet (Omron), CC-Link (Mitsubishi), Profinet (Siemens)</td>
+                </tr>
+                <tr>
+                  <td class="text-center">10</td>
+                  <td>Contoh Aplikasi & Studi Kasus</td>
                 </tr>
                 <tr>
                 <td></td>
                 <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Tidak Mempelajari</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center">1</td>
+                  <td>Materi yang ada di silabus basic dan intermediate</td>
                 </tr>
               </tbody>
             </table>
@@ -1273,6 +1335,54 @@
 
       // Javascript method's body can be found in assets/js/core/partials/_demo-object.js
       demo.initContactUsMap2();
+    });
+
+    
+    function pendidikanSelect(valueSelect)
+    {
+        var pend = valueSelect.options[valueSelect.selectedIndex].value;
+        document.getElementById("p_lain").style.display = pend == 'Lainnya' ? "block" : 'none';
+    }
+
+    function jabatanSelect(valueSelect)
+    {
+        var jab = valueSelect.options[valueSelect.selectedIndex].value;
+        document.getElementById("j_lain").style.display = jab == 'Lainnya' ? "block" : 'none';
+    }
+
+    function merekSelect(valueSelect)
+    {
+        var mer = valueSelect.options[valueSelect.selectedIndex].value;
+        document.getElementById("m_lain").style.display = mer == 'Lainnya' ? "block" : 'none';
+    }
+
+    $(document).ready(function() {
+        $('#pendidikan').change(function() {
+            var pendidikan = $('#pendidikan').val();
+            if (pendidikan == 'Lainnya') {
+                $('#pendidikan_lainnya').prop('required', true);
+            } else {
+                $('#pendidikan_lainnya').prop('required', false);
+            }
+        });
+
+        $('#jabatan').change(function() {
+            var jabatan = $('#jabatan').val();
+            if (jabatan == 'Lainnya') {
+                $('#jabatan_lainnya').prop('required', true);
+            } else {
+                $('#jabatan_lainnya').prop('required', false);
+            }
+        });
+
+        $('#merek').change(function() {
+            var merek = $('#merek').val();
+            if (merek == 'Lainnya') {
+                $('#merek_lainnya').prop('required', true);
+            } else {
+                $('#merek_lainnya').prop('required', false);
+            }
+        });
     });
   </script>
 </body>
