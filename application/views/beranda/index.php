@@ -428,11 +428,12 @@
                 </p>
                 <ul>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of PLC Family</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> PLC Composition</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Feature & Function of PLC</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Komposisi PLC: Hardware, Software dan Wiring</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Sistem Konfigurasi PLC</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Fungsi, Karakteristik & Fitur PLC</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & I/O Allocation</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Ladder Diagram</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Basic Programming</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
                 </ul>
                 <div class="card-footer">
@@ -456,11 +457,12 @@
                 </p>
                 <ul>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of Modular PLC</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Human Machine Interface</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Screen designing using HMI</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Intermediate Programming</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> PLC Composition: Hardware, Software & Wiring</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & I/O Allocation</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Intermediate Programming and Operation of Programming tools</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Function, Characteristic & Feature of HMI</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Setup & Integration HMI to PLC</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Basic screen designing using HMI programming tools</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
                 </ul>
                 <div class="card-footer">
@@ -481,12 +483,13 @@
                 Membuat program PLC dari awal untuk sebuah projek.
                 </p>
                 <ul>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Introduction of PLC with special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> PLC Composition: Hardware, Software and Wiring using I/O</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Special I/O: Analog Input, Analog Output, Networking</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration using special I/O</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Ethernet Communication & Networking System</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> System Configuration of PLC using special I/O </li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Function, Characteristic & Feature of special I/O</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Addressing & I/O Allocation of special I/O</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Addressing and Memory Allocation of Networking Module</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Programming tools (Practice)</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i> Ethernet Communication & Networking System</li>
                   <li><i class="fa fa-check" aria-hidden="true"></i> Application Examples</li>
                 </ul>
                 <div class="card-footer">
