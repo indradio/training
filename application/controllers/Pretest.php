@@ -15,7 +15,7 @@ class Pretest extends CI_Controller {
 		date_default_timezone_set('asia/jakarta');
 		$pretest = $this->db->get_where('pretest', ['email' => $this->session->userdata('email')])->row_array();
 		$data['title'] = 'Pretest';
-		if($pretest['email']){
+		if(!empty($pretest['email'])){
 			if($pretest['status']==1){
 				$this->load->model("pretest_model");
 				$data['soal'] = $this->pretest_model->get_questions();
