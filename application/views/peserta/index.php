@@ -32,8 +32,12 @@
 												<th>Tipe</th>
 												<th>Harapan</th>
 												<th>Catatan Makanan</th>
+												<th>Basic</th>
+												<th>Intermediate</th>
+												<th>Total</th>
+												<th>Level</th>
 												<th>Role</th>
-												<th class="disabled-sorting">Actions</th>
+												<!-- <th class="disabled-sorting">Actions</th> -->
 											</tr>
 										</thead>
 										<tfoot>
@@ -56,13 +60,19 @@
 												<th>Tipe</th>
 												<th>Harapan</th>
 												<th>Catatan Makanan</th>
+												<th>Basic</th>
+												<th>Intermediate</th>
+												<th>Total</th>
+												<th>Level</th>
 												<th>Role</th>
-												<th>Actions</th>
+												<!-- <th>Actions</th> -->
 											</tr>
 										</tfoot>
 										<tbody>
 										<?php 
-											$no = 1;foreach ($peserta as $p) : ?>
+											$no = 1;foreach ($peserta as $p) : 
+												$pretest = $this->db->get_where('pretest',['email' => $p['email']])->row_array();
+												?>
 											<tr>
 												<td><?= $no; ?></td>
 												<td><?= $p['nama']; ?></td>
@@ -82,6 +92,17 @@
 												<td><?= $p['tipe']; ?></td>
 												<td><?= $p['harapan']; ?></td>
 												<td><?= $p['makanan']; ?></td>
+												<?php if (!empty($pretest)){ ?>
+													<td><?= $pretest['total_basic']; ?></td>
+													<td><?= $pretest['total_intermediate']; ?></td>
+													<td><?= $pretest['total_hasil']; ?></td>
+													<td><?= $pretest['level']; ?></td>
+												<?php } else { 
+													echo '<td>-</td>';
+													echo '<td>-</td>'; 
+													echo '<td>-</td>'; 
+													echo '<td>Belum melakukan pretest</td>'; 
+												} ?>
 												<td><?php if ($p['role_id']==1)
 												{
 													echo 'Administrator';
@@ -90,9 +111,9 @@
 												}else{
 													echo 'Peserta';
 												} ?></td>
-												<td>
+												<!-- <td>
 													<a href="#" class="btn btn-simple btn-info btn-icon like"><i class="ti-heart"></i></a>
-												</td>
+												</td> -->
 											</tr>
 											<?php 
 										  $no++;
@@ -116,7 +137,6 @@
 		            searchPlaceholder: "Search records",
 		        }
 	        });
-
 
 	        var table = $('#datatables').DataTable();
 	         // Edit record
