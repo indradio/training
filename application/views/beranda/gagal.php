@@ -59,8 +59,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-round btn-primary" href="<?= base_url(); ?>pretest">
-              <i class="nc-icon nc-bullet-list-67"></i> Pretest
+            <a class="btn btn-round btn-primary" href="<?= base_url(); ?>#contactus">
+              <i class="nc-icon nc-send"></i> DAFTAR
             </a>
           </li>
         </ul>
@@ -76,15 +76,13 @@
         <div class="page-header header-video">
           <div class="filter filter-danger"></div>
           <!-- We show the video image placeholder instead of the video for small devices  -->
-          <div class="video-image" style="background-image: url('<?= base_url(); ?>assets/img/video-placeholder.png')"></div>
-          <video id="video-source" autoplay="true" preload="auto" loop="loop" muted="muted" volume="0">
-            <source src="<?= base_url(); ?>assets/video/fireworks.mp4" type="video/mp4"> Video not supported
-          </video>
+          <div class="page-header" style="background-image: url('<?= base_url(); ?>assets/img/cover.jpg')"></div>
+          <div class="filter"></div>
           <div class="content-center">
             <div class="row">
               <div class="col-md-6 ml-auto mr-auto text-center">
-                <h1 class="title"> Terima kasih</h1>
-                <h5 class="description">Silahkan mengikuti pretest yang telah kami sediakan. login menggunakan email anda dan password di bawah ini.</h5>
+                <h1 class="title">MAAF</h1>
+                <h5 class="description">Email yang anda gunakan sudah terdaftar.</h5>
                 <br />
               </div>
               <div class="col-md-12 ml-auto mr-auto"></div>
@@ -93,13 +91,13 @@
                   <div class="card-body">
                     <form method="" action="<?= base_url(); ?>pretest">
                       <div class="row">
-                        <div class="col-md-8">
-                            <div class="form-group">
-                              <input type="text" readonly class="form-control text-center" value="<?= $password; ?>"/>
-                            </div>
+                        <div class="col-md-6">
+                          
+                          <a href="<?= base_url(); ?>" class="btn btn-info btn-block">KEMBALI</a>
+</p>
                         </div>
-                        <div class="col-md-4">
-                          <button type="submit" class="btn btn-danger btn-block"><i class="nc-icon nc-bullet-list-67"></i> &nbsp; Mulai</button>
+                        <div class="col-md-6">
+                          <button type="submit" class="btn btn-danger btn-block">LOGIN</button>
                         </div>
                       </div>
                     </form>
