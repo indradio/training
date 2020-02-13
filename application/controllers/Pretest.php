@@ -112,9 +112,9 @@ class Pretest extends CI_Controller {
 		$total_hasil = $pretest['total_hasil'] + $hasil; 
 		$total_im = $total_hasil - $pretest['total_basic'];
 
-		if ($pretest['total_basic'] > 25 AND $pretest['total_intermediate'] > 25){
+		if ($pretest['total_basic'] > 25 AND $total_im > 25){
 			$level = 'ADVANCE';
-		}elseif ($pretest['total_basic'] > 25 AND $pretest['total_intermediate'] < 25){
+		}elseif ($total_hasil > 25 AND $total_im < 26){
 			$level = 'INTERMEDIATE';
 		}else{
 			$level = 'BASIC' ;
@@ -359,7 +359,6 @@ class Pretest extends CI_Controller {
 			$this->db->set('soal_20', $this->input->post('id'));
 			$this->db->set('jawaban_20', $this->input->post('options'));
 			$this->db->set('hasil_20', $hasil);
-			$this->db->set('total_intermediate', $total_im);
 			$this->db->set('total_intermediate', $total_im);
 			$this->db->set('total_hasil', $total_hasil);
 			$this->db->set('level', $level);
