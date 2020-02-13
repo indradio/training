@@ -112,9 +112,9 @@ class Pretest extends CI_Controller {
 		$total_hasil = $pretest['total_hasil'] + $hasil; 
 		$total_im = $total_hasil - $pretest['total_basic'];
 
-		if ($pretest['total_basic'] >= 26 AND $pretest['total_intermediate'] >= 26){
+		if ($pretest['total_basic'] > 25 AND $pretest['total_intermediate'] > 25){
 			$level = 'ADVANCE';
-		}elseif ($pretest['total_basic'] >= 26){
+		}elseif ($pretest['total_basic'] > 25 AND $pretest['total_intermediate'] < 25){
 			$level = 'INTERMEDIATE';
 		}else{
 			$level = 'BASIC' ;
@@ -299,7 +299,7 @@ class Pretest extends CI_Controller {
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 			
-			if ($total_hasil>=26)
+			if ($total_hasil>25)
 			{
 				redirect('pretest');
 			}else{
@@ -496,9 +496,9 @@ class Pretest extends CI_Controller {
 	public function waktu_habis()
 	{
 		$pretest = $this->db->get_where('pretest', ['email' => $this->session->userdata('email')])->row_array();
-		if ($pretest['total_basic'] >= 26 AND $pretest['total_intermediate'] >= 26){
+		if ($pretest['total_basic'] > 25 AND $pretest['total_intermediate'] > 25){
 			$level = 'ADVANCE';
-		}elseif ($pretest['total_basic'] >= 26){
+		}elseif ($pretest['total_basic'] > 25 AND $pretest['total_intermediate'] < 25){
 			$level = 'INTERMEDIATE';
 		}else{
 			$level = 'BASIC' ;
