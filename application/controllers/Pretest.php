@@ -566,7 +566,7 @@ class Pretest extends CI_Controller {
 
 			$this->db->set('basic', $pretest['total_basic']);
 			$this->db->set('intermediate', $pretest['total_intermediate']);
-			$this->db->set('total',  $pretest['total_hasil'];
+			$this->db->set('total', $pretest['total_hasil']);
 			$this->db->set('level', $level);
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('peserta');
