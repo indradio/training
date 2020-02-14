@@ -44,7 +44,7 @@ class Beranda extends CI_Controller {
 				'gender' => $this->input->post('gender'),
 				'makanan' => $this->input->post('makanan'),
 				'email' => $this->input->post('email'),
-				'phone' => '0'.$this->input->post('phone'),
+				'phone' => '62'.$this->input->post('phone'),
 				'tgl_lahir' => $tanggal_lahir,
 				'pendidikan' => $pendidikan,
 				'jurusan' => $this->input->post('jurusan'),
@@ -105,6 +105,32 @@ class Beranda extends CI_Controller {
 				"\r\n\r\nPassword anda : ". $password .
 				"\r\n\r\nSilahkan login di alamat berikut https://training.winteq-astra.com/pretest".
 				"\r\n\r\nIni adalah pesan otomatis, harap tidak membalas pesan ini".
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
+			$api_url = "http://panel.apiwha.com/send_message.php";
+			$api_url .= "?apikey=" . urlencode($my_apikey);
+			$api_url .= "&number=" . urlencode($destination);
+			$api_url .= "&text=" . urlencode($message);
+			json_decode(file_get_contents($api_url, false));
+
+			$my_apikey = "NQXJ3HED5LW2XV440HCG";
+			$destination = '6281113306882';
+			$message = "*Pendaftaran Peserta Training*" .
+				"\r\n\r\nNama : " . $this->input->post('nama') .
+				"\r\nEmail : " . $this->input->post('email') .
+				"\r\nPhone : 0" . $this->input->post('phone') .
+				"\r\nTgl Lahir : " . date('d F Y', strtotime($this->input->post('tanggal_lahir'))) .
+				"\r\nTingkat Pendidikan : " . $pendidikan .
+				"\r\nJurusan : " . $this->input->post('jurusan') .
+				"\r\nPerusahaan : " . $this->input->post('perusahaan') .
+				"\r\nLokasi : " . $this->input->post('lokasi') .
+				"\r\nJabatan : " . $jabatan .
+				"\r\nMasa Kerja : " . $this->input->post('masa_kerja') .
+				"\r\nPassword : ". $password .
+				"\r\n\r\nTanggal Training : " . date('d M Y', strtotime($this->input->post('tanggal_training'))) .
+				"\r\nProgram Training : " . $this->input->post('program') .
+				"\r\nMerek PLC : " . $merek ." (".$this->input->post('tipe').")".
+				"\r\nHarapan : " . $this->input->post('harapan') .
+				"\r\nMakanan : " . $this->input->post('makanan') .
 				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
 			$api_url = "http://panel.apiwha.com/send_message.php";
 			$api_url .= "?apikey=" . urlencode($my_apikey);
