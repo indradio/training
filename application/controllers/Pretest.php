@@ -487,6 +487,12 @@ class Pretest extends CI_Controller {
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
 
+			$this->db->set('basic', $pretest['total_basic']);
+			$this->db->set('intermediate', $total_im);
+			$this->db->set('total', $total_hasil);
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('peserta');
 
 			$mulai = strtotime($pretest['waktu_mulai']);
 			$selesai = strtotime(date('Y-m-d H:i:s'));
@@ -522,6 +528,21 @@ class Pretest extends CI_Controller {
 			$api_url .= "&number=" . urlencode($destination);
 			$api_url .= "&text=" . urlencode($message);
 			json_decode(file_get_contents($api_url, false));
+
+			$my_apikey = "NQXJ3HED5LW2XV440HCG";
+			$destination = '6281213124523';
+			$message = "*".$this->session->userdata('nama')." telah menyelesaikan PRETEST*" .
+				"\r\n\r\nEmail : " . $this->session->userdata('email') .
+				"\r\nNilai : " . $total_hasil .
+				"\r\nLevel : " . $level .
+				"\r\nDurasi : " . $durasi ." Menit" .
+				"\r\n\r\nIni adalah pesan otomatis, harap tidak membalas pesan ini".
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
+			$api_url = "http://panel.apiwha.com/send_message.php";
+			$api_url .= "?apikey=" . urlencode($my_apikey);
+			$api_url .= "&number=" . urlencode($destination);
+			$api_url .= "&text=" . urlencode($message);
+			json_decode(file_get_contents($api_url, false));
 			
 			redirect('pretest');
 		}
@@ -542,6 +563,13 @@ class Pretest extends CI_Controller {
 			$this->db->set('status', 9);
 			$this->db->where('email', $this->session->userdata('email'));
 			$this->db->update('pretest');
+
+			$this->db->set('basic', $pretest['total_basic']);
+			$this->db->set('intermediate', $pretest['total_intermediate']);
+			$this->db->set('total',  $pretest['total_hasil'];
+			$this->db->set('level', $level);
+			$this->db->where('email', $this->session->userdata('email'));
+			$this->db->update('peserta');
 
 			$mulai = strtotime($pretest['waktu_mulai']);
 			$selesai = strtotime($pretest['waktu_selesai']);
@@ -565,6 +593,21 @@ class Pretest extends CI_Controller {
 
 			$my_apikey = "NQXJ3HED5LW2XV440HCG";
 			$destination = '6281113306882';
+			$message = "*".$this->session->userdata('nama')." telah menyelesaikan PRETEST*" .
+				"\r\n\r\nEmail : " . $this->session->userdata('email') .
+				"\r\nNilai : " .$pretest['total_hasil'] .
+				"\r\nLevel : " . $level .
+				"\r\nDurasi : " . $durasi ." Menit" .
+				"\r\n\r\nIni adalah pesan otomatis, harap tidak membalas pesan ini".
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
+			$api_url = "http://panel.apiwha.com/send_message.php";
+			$api_url .= "?apikey=" . urlencode($my_apikey);
+			$api_url .= "&number=" . urlencode($destination);
+			$api_url .= "&text=" . urlencode($message);
+			json_decode(file_get_contents($api_url, false));
+
+			$my_apikey = "NQXJ3HED5LW2XV440HCG";
+			$destination = '6281213124523';
 			$message = "*".$this->session->userdata('nama')." telah menyelesaikan PRETEST*" .
 				"\r\n\r\nEmail : " . $this->session->userdata('email') .
 				"\r\nNilai : " .$pretest['total_hasil'] .
