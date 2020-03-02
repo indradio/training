@@ -576,50 +576,92 @@ class Pretest extends CI_Controller {
 			$selisih = $selesai - $mulai;
 			$durasi = floor($selisih / 60);
 
-			$my_apikey = "NQXJ3HED5LW2XV440HCG";
-			$destination = $this->session->userdata('phone');
-			$message = "*Terima kasih, Anda telah menyelesaikan PRETEST*" .
+			// Kirim via Whatsapp
+			$postData = array(
+				'deviceid' => 'ed59bffb-7ffd-4ac2-b039-b4725fdd4010',
+				'number' => $this->session->userdata('phone'),
+				'message' => "*Terima kasih, Anda telah menyelesaikan PRETEST*" .
 				"\r\n\r\nNama : " . $this->session->userdata('nama') .
 				"\r\nNilai : " .$pretest['total_hasil'] .
 				"\r\nLevel : " . $level .
 				"\r\nDurasi : " . $durasi ." Menit" .
 				"\r\n\r\nIni adalah pesan otomatis, harap tidak membalas pesan ini".
-				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
-			$api_url = "http://panel.apiwha.com/send_message.php";
-			$api_url .= "?apikey=" . urlencode($my_apikey);
-			$api_url .= "&number=" . urlencode($destination);
-			$api_url .= "&text=" . urlencode($message);
-			json_decode(file_get_contents($api_url, false));
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com"
+			);
 
-			$my_apikey = "NQXJ3HED5LW2XV440HCG";
-			$destination = '6281113306882';
-			$message = "*".$this->session->userdata('nama')." telah menyelesaikan PRETEST*" .
+			$ch = curl_init();
+
+			curl_setopt($ch, CURLOPT_URL, 'https://ws.premiumfast.net/api/v1/message/send');
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			
+			$headers = array();
+			$headers[] = 'Accept: application/json';
+			$headers[] = 'Authorization: Bearer 4495c8929e574477a9167352d529969cded0eb310cd936ecafa011dc48f2921b';
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			
+			$result = curl_exec($ch);
+
+			//WA to Anchila
+			$postData = array(
+				'deviceid' => 'ed59bffb-7ffd-4ac2-b039-b4725fdd4010',
+				'number' => '6281113306882',
+				'message' => "*".$this->session->userdata('nama')." telah menyelesaikan PRETEST*" .
 				"\r\n\r\nEmail : " . $this->session->userdata('email') .
 				"\r\nNilai : " .$pretest['total_hasil'] .
 				"\r\nLevel : " . $level .
 				"\r\nDurasi : " . $durasi ." Menit" .
 				"\r\n\r\nIni adalah pesan otomatis, harap tidak membalas pesan ini".
-				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
-			$api_url = "http://panel.apiwha.com/send_message.php";
-			$api_url .= "?apikey=" . urlencode($my_apikey);
-			$api_url .= "&number=" . urlencode($destination);
-			$api_url .= "&text=" . urlencode($message);
-			json_decode(file_get_contents($api_url, false));
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com"
+			);
 
-			$my_apikey = "NQXJ3HED5LW2XV440HCG";
-			$destination = '6281213124523';
-			$message = "*".$this->session->userdata('nama')." telah menyelesaikan PRETEST*" .
+			$ch = curl_init();
+
+			curl_setopt($ch, CURLOPT_URL, 'https://ws.premiumfast.net/api/v1/message/send');
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			
+			$headers = array();
+			$headers[] = 'Accept: application/json';
+			$headers[] = 'Authorization: Bearer 4495c8929e574477a9167352d529969cded0eb310cd936ecafa011dc48f2921b';
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			
+			$result = curl_exec($ch);
+
+			//WA to ABU
+			$postData = array(
+				'deviceid' => 'ed59bffb-7ffd-4ac2-b039-b4725fdd4010',
+				'number' => '6281213124523',
+				'message' => "*".$this->session->userdata('nama')." telah menyelesaikan PRETEST*" .
 				"\r\n\r\nEmail : " . $this->session->userdata('email') .
 				"\r\nNilai : " .$pretest['total_hasil'] .
 				"\r\nLevel : " . $level .
 				"\r\nDurasi : " . $durasi ." Menit" .
 				"\r\n\r\nIni adalah pesan otomatis, harap tidak membalas pesan ini".
-				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
-			$api_url = "http://panel.apiwha.com/send_message.php";
-			$api_url .= "?apikey=" . urlencode($my_apikey);
-			$api_url .= "&number=" . urlencode($destination);
-			$api_url .= "&text=" . urlencode($message);
-			json_decode(file_get_contents($api_url, false));
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com"
+			);
+
+			$ch = curl_init();
+
+			curl_setopt($ch, CURLOPT_URL, 'https://ws.premiumfast.net/api/v1/message/send');
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			
+			$headers = array();
+			$headers[] = 'Accept: application/json';
+			$headers[] = 'Authorization: Bearer 4495c8929e574477a9167352d529969cded0eb310cd936ecafa011dc48f2921b';
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			
+			$result = curl_exec($ch);
 			
 			redirect('pretest');
 	}

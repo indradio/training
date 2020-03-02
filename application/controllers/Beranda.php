@@ -96,25 +96,39 @@ class Beranda extends CI_Controller {
 			$this->email->message("Dear ".$this->input->post('nama') ."<p>Password anda : ".$password."<p>Silahkan mengikuti PRETEST di link berikut <a href='https://training.winteq-astra.com/pretest' target='_blank'>Winteq Technical Training Programs (PRETEST)</a>");
 			
 			// Kirim via Whatsapp
-	
-			$my_apikey = "NQXJ3HED5LW2XV440HCG";
-			$destination = '62'.$this->input->post('phone');
-			$message = "*Terima kasih, Pendaftaran anda telah berhasil*" .
+			$postData = array(
+				'deviceid' => 'ed59bffb-7ffd-4ac2-b039-b4725fdd4010',
+				'number' => '62'.$this->input->post('phone'),
+				'message' => "*Terima kasih, Pendaftaran anda telah berhasil*" .
 				"\r\nSelamat datang di Winteq Technical Training Program" .
 				"\r\nUntuk mengikuti training ini, silahkan anda menyelesaikan PRETEST yang telah kami siapkan." .
 				"\r\n\r\nPassword anda : ". $password .
 				"\r\n\r\nSilahkan login di alamat berikut https://training.winteq-astra.com/pretest".
 				"\r\n\r\nIni adalah pesan otomatis, harap tidak membalas pesan ini".
-				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
-			$api_url = "http://panel.apiwha.com/send_message.php";
-			$api_url .= "?apikey=" . urlencode($my_apikey);
-			$api_url .= "&number=" . urlencode($destination);
-			$api_url .= "&text=" . urlencode($message);
-			json_decode(file_get_contents($api_url, false));
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com"
+			);
 
-			$my_apikey = "NQXJ3HED5LW2XV440HCG";
-			$destination = '6281113306882';
-			$message = "*Pendaftaran Peserta Training*" .
+			$ch = curl_init();
+
+			curl_setopt($ch, CURLOPT_URL, 'https://ws.premiumfast.net/api/v1/message/send');
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			
+			$headers = array();
+			$headers[] = 'Accept: application/json';
+			$headers[] = 'Authorization: Bearer 4495c8929e574477a9167352d529969cded0eb310cd936ecafa011dc48f2921b';
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			
+			$result = curl_exec($ch);
+
+			//WA to Anchila
+			$postData = array(
+				'deviceid' => 'ed59bffb-7ffd-4ac2-b039-b4725fdd4010',
+				'number' => '6281113306882',
+				'message' => "*Pendaftaran Peserta Training*" .
 				"\r\n\r\nNama : " . $this->input->post('nama') .
 				"\r\nEmail : " . $this->input->post('email') .
 				"\r\nPhone : 0" . $this->input->post('phone') .
@@ -131,16 +145,30 @@ class Beranda extends CI_Controller {
 				"\r\nMerek PLC : " . $merek ." (".$this->input->post('tipe').")".
 				"\r\nHarapan : " . $this->input->post('harapan') .
 				"\r\nMakanan : " . $this->input->post('makanan') .
-				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
-			$api_url = "http://panel.apiwha.com/send_message.php";
-			$api_url .= "?apikey=" . urlencode($my_apikey);
-			$api_url .= "&number=" . urlencode($destination);
-			$api_url .= "&text=" . urlencode($message);
-			json_decode(file_get_contents($api_url, false));
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com"
+			);
 
-			$my_apikey = "NQXJ3HED5LW2XV440HCG";
-			$destination = '6281213124523';
-			$message = "*Pendaftaran Peserta Training*" .
+			$ch = curl_init();
+
+			curl_setopt($ch, CURLOPT_URL, 'https://ws.premiumfast.net/api/v1/message/send');
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			
+			$headers = array();
+			$headers[] = 'Accept: application/json';
+			$headers[] = 'Authorization: Bearer 4495c8929e574477a9167352d529969cded0eb310cd936ecafa011dc48f2921b';
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			
+			$result = curl_exec($ch);
+
+			//WA to ABU
+			$postData = array(
+				'deviceid' => 'ed59bffb-7ffd-4ac2-b039-b4725fdd4010',
+				'number' => '6281213124523',
+				'message' => "*Pendaftaran Peserta Training*" .
 				"\r\n\r\nNama : " . $this->input->post('nama') .
 				"\r\nEmail : " . $this->input->post('email') .
 				"\r\nPhone : 0" . $this->input->post('phone') .
@@ -157,12 +185,24 @@ class Beranda extends CI_Controller {
 				"\r\nMerek PLC : " . $merek ." (".$this->input->post('tipe').")".
 				"\r\nHarapan : " . $this->input->post('harapan') .
 				"\r\nMakanan : " . $this->input->post('makanan') .
-				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com";
-			$api_url = "http://panel.apiwha.com/send_message.php";
-			$api_url .= "?apikey=" . urlencode($my_apikey);
-			$api_url .= "&number=" . urlencode($destination);
-			$api_url .= "&text=" . urlencode($message);
-			json_decode(file_get_contents($api_url, false));
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com"
+			);
+
+			$ch = curl_init();
+
+			curl_setopt($ch, CURLOPT_URL, 'https://ws.premiumfast.net/api/v1/message/send');
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			
+			$headers = array();
+			$headers[] = 'Accept: application/json';
+			$headers[] = 'Authorization: Bearer 4495c8929e574477a9167352d529969cded0eb310cd936ecafa011dc48f2921b';
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			
+			$result = curl_exec($ch);
 	
 			redirect('beranda/berhasil/' . $password);
 		}else{
