@@ -164,6 +164,46 @@ class Beranda extends CI_Controller {
 			
 			$result = curl_exec($ch);
 
+			//WA to Uzla
+			$postData = array(
+				'deviceid' => 'ed59bffb-7ffd-4ac2-b039-b4725fdd4010',
+				'number' => '6281517999619',
+				'message' => "*Pendaftaran Peserta Training*" .
+				"\r\n\r\nNama : " . $this->input->post('nama') .
+				"\r\nEmail : " . $this->input->post('email') .
+				"\r\nPhone : 0" . $this->input->post('phone') .
+				"\r\nTgl Lahir : " . date('d F Y', strtotime($this->input->post('tanggal_lahir'))) .
+				"\r\nTingkat Pendidikan : " . $pendidikan .
+				"\r\nJurusan : " . $this->input->post('jurusan') .
+				"\r\nPerusahaan : " . $this->input->post('perusahaan') .
+				"\r\nLokasi : " . $this->input->post('lokasi') .
+				"\r\nJabatan : " . $jabatan .
+				"\r\nMasa Kerja : " . $this->input->post('masa_kerja') .
+				"\r\nPassword : ". $password .
+				"\r\n\r\nTanggal Training : " . date('d M Y', strtotime($this->input->post('tanggal_training'))) .
+				"\r\nProgram Training : " . $this->input->post('program') .
+				"\r\nMerek PLC : " . $merek ." (".$this->input->post('tipe').")".
+				"\r\nHarapan : " . $this->input->post('harapan') .
+				"\r\nMakanan : " . $this->input->post('makanan') .
+				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com"
+			);
+
+			$ch = curl_init();
+
+			curl_setopt($ch, CURLOPT_URL, 'https://ws.premiumfast.net/api/v1/message/send');
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			
+			$headers = array();
+			$headers[] = 'Accept: application/json';
+			$headers[] = 'Authorization: Bearer 4495c8929e574477a9167352d529969cded0eb310cd936ecafa011dc48f2921b';
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			
+			$result = curl_exec($ch);
+
 			//WA to ABU
 			$postData = array(
 				'deviceid' => 'ed59bffb-7ffd-4ac2-b039-b4725fdd4010',
@@ -186,6 +226,30 @@ class Beranda extends CI_Controller {
 				"\r\nHarapan : " . $this->input->post('harapan') .
 				"\r\nMakanan : " . $this->input->post('makanan') .
 				"\r\nUntuk informasi lebih lengkap dapat dilihat melalui link berikut https://training.winteq-astra.com"
+			);
+
+			$ch = curl_init();
+
+			curl_setopt($ch, CURLOPT_URL, 'https://ws.premiumfast.net/api/v1/message/send');
+			curl_setopt($ch, CURLOPT_POST, 1);
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			
+			$headers = array();
+			$headers[] = 'Accept: application/json';
+			$headers[] = 'Authorization: Bearer 4495c8929e574477a9167352d529969cded0eb310cd936ecafa011dc48f2921b';
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			
+			$result = curl_exec($ch);
+
+			//WA to ME
+			$postData = array(
+				'deviceid' => 'ed59bffb-7ffd-4ac2-b039-b4725fdd4010',
+				'number' => '6281311196988',
+				'message' => "*Pendaftaran Peserta Training Baru*" .
+				"\r\nBuruan update sebelum ditanyain!"
 			);
 
 			$ch = curl_init();
